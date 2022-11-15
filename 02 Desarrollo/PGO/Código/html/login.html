@@ -45,11 +45,7 @@
                 class="titulo d-flex justify-content-start align-items-center"
               >
                 <h1>Bienvenido a&nbsp;</h1>
-                <img
-                  src="../img/logo.svg"
-                  alt="logo"
-                  style="height: 40px"
-                />
+                <img src="../img/logo.svg" alt="logo" style="height: 40px" />
               </div>
             </div>
             <!-- Fin Bienvenida -->
@@ -67,7 +63,9 @@
                     alt="google"
                     style="padding-right: 5%; height: 25px"
                   />
-                  <label for="btn-google-login">Ingresa con Google</label>
+                  <label for="btn-google-login" style="cursor: pointer"
+                    >Ingresa con Google</label
+                  >
                 </button>
               </div>
               <div class="col-md-12">
@@ -76,12 +74,16 @@
                   class="alt-login btn w-100"
                   type="button"
                 >
-                  <img
-                    src="../img/facebook.svg"
-                    alt="google"
-                    style="padding-right: 5%; height: 25px"
-                  />
-                  <label for="btn-google-login">Ingresa con Facebook</label>
+                  <div>
+                    <img
+                      src="../img/facebook.svg"
+                      alt="google"
+                      style="padding-right: 5%; height: 25px"
+                    />
+                    <label for="btn-facebook-login" style="cursor: pointer"
+                      >Ingresa con Facebook</label
+                    >
+                  </div>
                 </button>
               </div>
             </div>
@@ -108,10 +110,10 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="floatingInputGroup1"
+                      id="floatingInputGroup"
                       placeholder="Correo"
                     />
-                    <label for="floatingInputGroup1">Correo</label>
+                    <label for="floatingInputGroup">Correo</label>
                   </div>
                 </div>
                 <!-- Fin Input Correo -->
@@ -130,6 +132,13 @@
                     />
                     <label for="floatingPassword">Contraseña</label>
                   </div>
+                  <span class="input-group-text">
+                    <!-- TODO: Corregir alternancia en la imagen del ojo (abierto/cerrado) -->
+                    <!-- NOTE: Corregir sombras al ingresar en el input  -->
+                    <button class="btn" type="button">
+                      <img src="../img/eye.svg" alt="" />
+                    </button>
+                  </span>
                 </div>
                 <!-- Fin Input Contraseña -->
 
