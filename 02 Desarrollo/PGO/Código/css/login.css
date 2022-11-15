@@ -1,9 +1,3 @@
-/* REVISADOS */
-body {
-    background-color: rgba(229, 229, 229, 1);
-    font-family: Poppins;
-}
-
 /* PRUEBAS */
 
 /* .f-font {
@@ -15,6 +9,22 @@ body {
   text-align: left;
 }
  */
+
+/* Revisados */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Variables */
+:root {
+  --bg-color: #e5e5e5;
+}
+
+/* Componentes */
+
+body {
+  background-color: var(--bg-color);
+  font-family: Poppins;
+}
+
 /* Separador -- o -- */
 .separator {
   display: flex;
@@ -35,4 +45,12 @@ body {
 
 .separator:not(:empty)::after {
   margin-left: 0.25em;
+}
+
+/* Responsive */
+/* NOTE: Oculta la ilustracion si es menor a 768px */
+@media (max-width: 768px) {
+  .ilustracion {
+    display: none;
+  }
 }

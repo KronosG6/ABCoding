@@ -11,11 +11,6 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <!-- Google Fonts CSS -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/login.css" />
   </head>
@@ -23,26 +18,26 @@
     <!-- Inicio Contenedor -->
     <div class="container-fluid">
       <!--Inicio Fila Global -->
-      <div class="row p-5 vh-100 align-items-center">
+      <div class="row vh-100 align-items-center">
         <!-- Inicio Ilustracion -->
         <div class="col-md-6">
           <div
+            id="ilustracion"
             class="bg vh-100"
             style="
               background-image: url(../img/illustration.svg);
               background-position: center;
               background-size: contain;
               background-repeat: no-repeat;
+              margin-left: 15%;
+              margin-right: 15%;
             "
-          >
-            <!-- TODO: Usar imagen como background -->
-            <!-- <img class="w-100 h-100" src="../img/illustration.svg" alt="ilustracion" /> -->
-          </div>
+          ></div>
         </div>
         <!-- Fin Ilustracion -->
 
         <!-- Inicio Panel Login -->
-        <div class="col-md-6">
+        <div id="panel-login" class="col-md-6">
           <!-- Inicio Bienvenida -->
           <div class="row">
             <div class="d-flex justify-content-center align-items-center">
