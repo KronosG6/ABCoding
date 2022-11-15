@@ -40,12 +40,15 @@
           <div id="panel-login">
             <!-- Inicio Bienvenida -->
             <div class="row">
-              <div id="titulo" class="d-flex justify-content-start align-items-center">
+              <div
+                id="titulo"
+                class="titulo d-flex justify-content-start align-items-center"
+              >
                 <h1>Bienvenido a&nbsp;</h1>
                 <img
-                  class="justify-content-center"
                   src="../img/logo.svg"
                   alt="logo"
+                  style="height: 40px"
                 />
               </div>
             </div>
@@ -54,10 +57,32 @@
             <!-- Inicio Login por redes sociales -->
             <div class="row">
               <div class="col-md-12">
-                <h2>Ingresa con Google</h2>
+                <button
+                  id="btn-google-login"
+                  class="alt-login btn w-100"
+                  type="button"
+                >
+                  <img
+                    src="../img/google.svg"
+                    alt="google"
+                    style="padding-right: 5%; height: 25px"
+                  />
+                  <label for="btn-google-login">Ingresa con Google</label>
+                </button>
               </div>
               <div class="col-md-12">
-                <h2>Ingresa con Facebook</h2>
+                <button
+                  id="btn-facebook-login"
+                  class="alt-login btn w-100"
+                  type="button"
+                >
+                  <img
+                    src="../img/facebook.svg"
+                    alt="google"
+                    style="padding-right: 5%; height: 25px"
+                  />
+                  <label for="btn-google-login">Ingresa con Facebook</label>
+                </button>
               </div>
             </div>
             <!-- Fin Login por redes sociales -->
