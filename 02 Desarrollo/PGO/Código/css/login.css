@@ -16,6 +16,7 @@
 /* Variables */
 :root {
   --bg-color: #e5e5e5;
+  --panel-color: #ffffff;
 }
 
 /* Componentes */
@@ -23,6 +24,14 @@
 body {
   background-color: var(--bg-color);
   font-family: Poppins;
+}
+
+#panel-login {
+  padding: 5% 5% 5% 5%;
+  margin-right: 15%;
+  background-color: var(--panel-color);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
 }
 
 /* Separador -- o -- */
@@ -36,7 +45,7 @@ body {
 .separator::after {
   content: "";
   flex: 1;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #BFBFBF;
 }
 
 .separator:not(:empty)::before {
@@ -48,9 +57,12 @@ body {
 }
 
 /* Responsive */
-/* NOTE: Oculta la ilustracion si es menor a 768px */
+
 @media (max-width: 768px) {
-  .ilustracion {
+  #ilustracion {
     display: none;
+  }
+  #panel-login {
+    margin: 20px 10px 20px 10px;
   }
 }
