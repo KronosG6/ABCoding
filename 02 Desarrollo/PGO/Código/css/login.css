@@ -39,7 +39,7 @@ body {
 }
 
 #titulo {
-  margin-bottom: 5%;
+  margin-bottom: 4%;
 }
 
 h1 {
@@ -93,6 +93,10 @@ h1 {
 
 .bt-login {
   margin: 3% 0% 3% 0%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-weight: bolder;
+  background-color: var(--enfasis);
 }
 
 .link {
