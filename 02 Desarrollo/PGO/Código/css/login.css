@@ -55,10 +55,23 @@ h1 {
   font-size: smaller;
 }
 
-.input-group > .form-floating > .form-control, .input-group > .input-group-text {
+.input-group > .form-floating > .form-control,
+.input-group > .input-group-text,
+.input-group > .btn {
   background: var(--input-bg-color);
   border: var(--input-bg-color);
   border-radius: 8px;
+}
+
+/* .input-group > .form-floating > .form-control {
+}
+
+.input-group > .btn {
+} */
+
+/* Cuando se accede al campo del input */
+.input-group > .form-floating > .form-control:focus {
+  box-shadow: 0px 0px;
 }
 
 /* Separador -- o -- */
