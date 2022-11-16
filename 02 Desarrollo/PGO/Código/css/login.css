@@ -19,6 +19,7 @@
   --panel-color: #ffffff;
   --shadow-color: #0000001c;
   --input-bg-color: #ececec;
+  --enfasis: #4c40f7;
 }
 
 /* Componentes */
@@ -72,6 +73,26 @@ h1 {
 /* Cuando se accede al campo del input */
 .input-group > .form-floating > .form-control:focus {
   box-shadow: 0px 0px;
+}
+
+#check {
+  background: var(--input-bg-color);
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+#check:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  background-color: var(--enfasis);
+  border: 0px;
+}
+
+#check:focus {
+  box-shadow: 0 0;
+}
+
+.bt-login {
+  margin: 3% 0% 3% 0%;
 }
 
 /* Separador -- o -- */
