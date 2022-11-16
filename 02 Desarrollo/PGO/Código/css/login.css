@@ -1,19 +1,9 @@
-/* PRUEBAS */
-
-/* .f-font {
-  color: rgba(46, 46, 46, 1);
-  font-family: Poppins;
-  font-weight: Medium;
-  font-size: 36px;
-  opacity: 1;
-  text-align: left;
-}
- */
-
-/* Revisados */
+/* Se importa la fuente Poppins */
+/* TODO: Optimizar solicitud de fuente a lo necesario */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /* Variables */
+
 :root {
   --bg-color: #e5e5e5;
   --panel-color: #ffffff;
@@ -30,27 +20,18 @@ body {
   color: #2f2f2f;
 }
 
-#panel-login {
-  padding: 5% 8% 5% 8%;
-  margin: 3% 15% 3% 0%;
-  background-color: var(--panel-color);
-  box-shadow: 0px 0px 4px var(--shadow-color);
-  border-radius: 8px;
-}
-
-#titulo {
-  margin-bottom: 4%;
-}
-
 h1 {
   font-weight: 500;
   font-size: x-large;
   margin-right: 3%;
 }
 
+/* Clases */
+
 .alt-login {
   margin-top: 5%;
   padding: 2% 0% 2% 0%;
+  border-color: var(--panel-color) !important;
   box-shadow: 0px 4px 15px var(--shadow-color);
   border-radius: 8px;
   font-size: smaller;
@@ -64,31 +45,9 @@ h1 {
   border-radius: 8px;
 }
 
-/* .input-group > .form-floating > .form-control {
-}
-
-.input-group > .btn {
-} */
-
 /* Cuando se accede al campo del input */
 .input-group > .form-floating > .form-control:focus {
   box-shadow: 0px 0px;
-}
-
-#check {
-  background: var(--input-bg-color);
-  border: 1px solid #d9d9d9;
-  border-radius: 4px;
-}
-
-#check:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
-  background-color: var(--enfasis);
-  border: 0px;
-}
-
-#check:focus {
-  box-shadow: 0 0;
 }
 
 .bt-login {
@@ -101,7 +60,7 @@ h1 {
 }
 
 .link {
-  color: var(--enfasis);
+  color: var(--enfasis) !important;
   text-decoration: none;
 }
 
@@ -127,6 +86,36 @@ h1 {
 
 .separator:not(:empty)::after {
   margin-left: 0.25em;
+}
+
+/* Id's */
+
+#panel-login {
+  padding: 5% 8% 5% 8%;
+  margin: 3% 15% 3% 0%;
+  background-color: var(--panel-color);
+  box-shadow: 0px 0px 4px var(--shadow-color);
+  border-radius: 8px;
+}
+
+#titulo {
+  margin-bottom: 4%;
+}
+
+#check {
+  background: var(--input-bg-color);
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+#check:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  background-color: var(--enfasis);
+  border: 0px;
+}
+
+#check:focus {
+  box-shadow: 0 0;
 }
 
 /* Responsive */
