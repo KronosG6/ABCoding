@@ -95,6 +95,11 @@ h1 {
   margin: 3% 0% 3% 0%;
 }
 
+.link {
+  color: var(--enfasis);
+  text-decoration: none;
+}
+
 /* Separador -- o -- */
 .separator {
   display: flex;
