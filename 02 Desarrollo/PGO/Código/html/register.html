@@ -3,6 +3,7 @@
 <!-- FIXME: Proporciones (reactive) -->
 <!-- FIXME: SVG en lugar de IMG  -->
 <!-- FIXME: Normalizar estilos -->
+<!-- FIXME: Disminuir tamaño de los input del formulario -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -61,7 +62,7 @@
             <div class="row">
               <div class="col-md-12">
                 <button
-                  id="btn-google-login"
+                  id="btn-google"
                   class="alt-login btn w-100"
                   type="button"
                 >
@@ -70,14 +71,14 @@
                     alt="google"
                     style="padding-right: 5%; height: 25px"
                   />
-                  <label for="btn-google-login" style="cursor: pointer"
-                    >Ingresa con Google</label
+                  <label for="btn-google" style="cursor: pointer"
+                    >Registrarme con Google</label
                   >
                 </button>
               </div>
               <div class="col-md-12">
                 <button
-                  id="btn-facebook-login"
+                  id="btn-facebook"
                   class="alt-login btn w-100"
                   type="button"
                 >
@@ -87,8 +88,8 @@
                       alt="google"
                       style="padding-right: 5%; height: 25px"
                     />
-                    <label for="btn-facebook-login" style="cursor: pointer"
-                      >Ingresa con Facebook</label
+                    <label for="btn-facebook" style="cursor: pointer"
+                      >Registrarme con Facebook</label
                     >
                   </div>
                 </button>
@@ -121,6 +122,23 @@
                   </div>
                 </div>
                 <!-- Fin Input Correo -->
+                
+                <!-- Inicio Input Nombre -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                      <img src="../img/user-circle.svg" alt="user" />
+                    </span>
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInputGroup"
+                        placeholder="Nombre"
+                      />
+                      <label for="floatingInputGroup">Nombre</label>
+                    </div>
+                  </div>
+                  <!-- Fin Input Nombre -->
 
                 <!-- Inicio Input Contraseña -->
                 <div class="input-group mb-3">
@@ -142,35 +160,33 @@
                   </button>
                 </div>
                 <!-- Fin Input Contraseña -->
-
-                <!-- Inicio Opciones contraseña -->
-                <div
-                  class="d-flex justify-content-between"
-                  style="font-size: smaller"
-                >
-                  <span>
-                    <input
-                      id="check"
-                      class="form-check-input"
-                      type="checkbox"
-                      checked="checked"
-                    />
-                    <label class="form-check-label" for="check"
-                      >Recuérdame</label
-                    >
-                  </span>
-
-                  <span>
-                    <a class="link" href="#"> ¿Olvidó su contraseña? </a>
-                  </span>
-                </div>
-                <!-- Fin Opciones contraseña -->
+                
+                <!-- Inicio Input Repetir Contraseña -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                      <img src="../img/key.svg" alt="key" />
+                    </span>
+                    <div class="form-floating">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="floatingRepPassword"
+                        placeholder="Repetir contraseña"
+                      />
+                      <label for="floatingRepPassword">Repetir contraseña</label>
+                    </div>
+                    <!-- TODO: Agregar animación en la imagen del ojo (abierto/cerrado) -->
+                    <button class="btn btn-outline-secondary" type="button">
+                      <img src="../img/eye.svg" alt="" />
+                    </button>
+                  </div>
+                  <!-- Fin Input Repetir Contraseña -->
 
                 <!-- Inicio Boton Enviar -->
                 <!-- TODO: Agregar :hover y :active -->
                 <div class="col-12">
                   <button class="bt-login btn btn-primary w-100" type="submit">
-                    Iniciar sesión
+                    Registrarme
                   </button>
                 </div>
 
@@ -179,8 +195,8 @@
                 <!-- Inicio Sugerencia registrar -->
                 <div class="d-flex justify-content-center">
                   <span style="font-size: smaller">
-                    <span>¿No tienes una cuenta?</span>
-                    <a class="link" href="#">Regístrate</a>
+                    <span>¿Ya tienes una cuenta?</span>
+                    <a class="link" href="#">Inicia sesión</a>
                   </span>
                 </div>
                 <!-- Fin Sugerencia registrar -->
