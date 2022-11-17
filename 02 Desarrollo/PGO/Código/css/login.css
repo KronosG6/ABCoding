@@ -81,11 +81,11 @@ h1 {
 }
 
 .separator:not(:empty)::before {
-  margin-right: 0.25em;
+  margin-right: 2em;
 }
 
 .separator:not(:empty)::after {
-  margin-left: 0.25em;
+  margin-left: 2em;
 }
 
 /* Id's */

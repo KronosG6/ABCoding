@@ -1,3 +1,9 @@
+<!-- TODO: Agregar ícono de página -->
+<!-- TODO: Agregar animaciones a elementos -->
+<!-- FIXME: Proporciones (reactive) -->
+<!-- FIXME: SVG en lugar de IMG  -->
+<!-- FIXME: Normalizar estilos -->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -22,7 +28,7 @@
         <!-- Inicio Ilustracion -->
         <div id="ilustracion" class="col-md-6">
           <div
-            class="bg vh-100"
+            class="vh-100"
             style="
               background-image: url(../img/illustration.svg);
               background-position: center;
@@ -42,7 +48,7 @@
             <div class="row">
               <div
                 id="titulo"
-                class="titulo d-flex justify-content-start align-items-center"
+                class="d-flex justify-content-start align-items-center"
               >
                 <h1>Bienvenido a&nbsp;</h1>
                 <img src="../img/logo.svg" alt="logo" style="height: 40px" />
@@ -51,6 +57,7 @@
             <!-- Fin Bienvenida -->
 
             <!-- Inicio Login por redes sociales -->
+            <!-- TODO: Agregar :hover y :active -->
             <div class="row">
               <div class="col-md-12">
                 <button
@@ -89,12 +96,9 @@
             </div>
             <!-- Fin Login por redes sociales -->
 
-            <!-- TODO: Ver si se puede omitir el uso de row -->
             <!-- Inicio Separador -->
             <div class="row">
-              <span class="separator"
-                >&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;</span
-              >
+              <span class="separator">O</span>
             </div>
             <!-- Fin Separador -->
 
@@ -132,7 +136,7 @@
                     />
                     <label for="floatingPassword">Contraseña</label>
                   </div>
-                  <!-- TODO: Corregir alternancia en la imagen del ojo (abierto/cerrado) -->
+                  <!-- TODO: Agregar animación en la imagen del ojo (abierto/cerrado) -->
                   <button class="btn btn-outline-secondary" type="button">
                     <img src="../img/eye.svg" alt="" />
                   </button>
@@ -163,6 +167,7 @@
                 <!-- Fin Opciones contraseña -->
 
                 <!-- Inicio Boton Enviar -->
+                <!-- TODO: Agregar :hover y :active -->
                 <div class="col-12">
                   <button class="bt-login btn btn-primary w-100" type="submit">
                     Iniciar sesión
