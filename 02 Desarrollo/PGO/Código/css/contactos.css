@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #eaeaea;
+    background: #e9e9e9;
     padding: 2rem;
 }
 
@@ -17,21 +17,19 @@ body {
     margin: auto;
 }
 
+/* cabecera  logo y titulo*/
 .container-contacts .items-logo-text {
     display: flex;
     width: 100%;
     height: 70px;
     padding: 15px;
     border-bottom: 1px solid #ccc;
-   /* background: #c0bbc0*/
-    
 }
 
 .container-contacts .items-logo-text .item-logo {
     width: 10%;
     height: 100%;
     margin-left: 60px;
-
 }
 
 .container-contacts .items-logo-text .item-logo img {
@@ -52,6 +50,7 @@ body {
 
 }
 
+/*seccion lista de contactos*/
 
 .container-contacts .container-users {
     width: 320px;
@@ -59,11 +58,45 @@ body {
     background: #f5f5f5;
 }
 
+/*seccion de busqueda*/
+
+.section-search {
+    padding: 1px 0;
+    margin-bottom: 1rem;
+    border-bottom: 1.5px solid #ccc;
+}
+
+.section-search .input-search {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.section-search .input-search h3 {
+    margin-right: 1rem;
+}
+
+.section-search .input-search input {
+    display: block;
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+}
+
+.section-search .input-search i {
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+}
+
 .section-users{
     display: flex;
     flex-direction: column;
     width: 100%;
-  /*  background: red;*/
+    padding-right: 15px;
 }
 
 .user {
@@ -78,6 +111,7 @@ body {
     display: block;
     width: 50px;
     margin-right: 1rem;
+    margin-left: 0.5rem;
     position: relative;
 }
 
