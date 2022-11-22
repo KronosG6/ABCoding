@@ -1,0 +1,133 @@
+:root {
+    --blanco: #FFFFFF;
+    --primary: #4C40F7;
+    --gris-1: #444343;
+    --gris-2: #6B6B6B;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body {
+    font-size: 16px; /* 1 rem= 10 px */
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    margin: 0 0 0 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem 0 4rem;
+}
+
+main {
+    margin: 0 2rem 0 2rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+}
+
+
+.logo-profe {
+    font-weight: 500;
+    color: var(--gris-1);
+}
+
+.logo-go {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: var(--blanco);
+    background-color: var(--primary);
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 1.5rem;
+}
+
+.nav-text {
+    font-weight: 600;
+    color: var(--gris-2);
+    margin: 0 1rem 0 1rem;
+}
+
+.nav-icon {
+    color: var(--gris-2);
+}
+
+.nav-account {
+    display: flex;
+    align-items: center;
+}
+
+.nav-class h4{
+    font-weight: 500;
+    margin: 0.5rem 3rem 0.5rem 3rem;
+    padding: 1.5rem;
+    color: var(--primary);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 0.2rem;
+    border-color: var(--primary);
+}
+
+.nav-class h4:hover{
+    font-weight: 500;
+    margin: 0.5rem 3rem 0.5rem 3rem;
+    padding: 1.5rem;
+    color: var(--blanco);
+    background: var(--primary);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 0.2rem;
+    border-color: var(--primary);
+}
+
+
+nav {
+    display: flex;
+}
+
+.sec-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50rem;
+}
+
+.sec-1 img {
+    min-width: 10rem;
+    max-width: 55rem;
+    
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border-style: solid;
+    min-width:min-content;
+}
+
+@media (min-width: 480px) {
+  
+}
