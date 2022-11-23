@@ -254,7 +254,6 @@ body {
     padding-right: 15px;
    /* margin-bottom: 1rem;*/
     border-bottom: 1px solid #ccc;
-    background: orange;
 }
 
 /*seccion input mensajes*/
@@ -372,7 +371,6 @@ textarea::placeholder {
 
 .box-left {
     display: flex;
-    background: pink;
 }
 
 
@@ -381,16 +379,31 @@ textarea::placeholder {
 }
 
 .message {
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
-    max-width: 300px;
-    margin: 20px 0 20px 25px;
+    max-width: 400px;
 }
 
-.box-left .message p {
+.m-left {
+    margin: 10px 0 10px 40px;
+}
+
+.m-right {
+    margin: 10px 25px 10px 0;
+}
+
+.message p  {
     margin: 0;
     word-break: break-all;
     color: #fff;
+    font-size: 13px;
+}
+
+.message span {
+    display: block;
+    font-size: 10px;
+    color: #999;
+    float: right;
 }
 
 .box-right {
