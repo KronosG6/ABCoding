@@ -68,8 +68,12 @@ header h1 {
   height: 50px;
 }
 
+.input-group > .input-group-text {
+  width: 48px;
+}
+
 .form-floating label {
-  margin-top: -0.2em;
+  margin-top: -0.25em;
 }
 
 .input-group {
@@ -94,7 +98,7 @@ header h1 {
   background: #dadada !important;
 }
 
-.bt-login {
+.main-btn {
   background-color: var(--enfasis) !important;
   margin: 2% 0;
   padding-top: 2%;
@@ -183,7 +187,7 @@ header img {
     border-radius: 8px;
     height: 75vh;
   }
-  
+
   .alt-login {
     margin-top: 8%;
   }
