@@ -1,8 +1,7 @@
 <!-- TODO: Agregar ícono de página -->
 <!-- TODO: Agregar animaciones a elementos -->
-<!-- * Proporciones (reactive) -->
 <!-- * SVG en lugar de IMG  -->
-<!-- * Normalizar estilos -->
+<!-- * Agregar CDN para iconos -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -24,77 +23,64 @@
     <!-- Inicio Contenedor -->
     <div class="container-fluid">
       <!--Inicio Fila Global -->
-      <main class="row vh-100 align-items-center">
+      <div class="row vh-100 align-items-center">
         <!-- Inicio Ilustracion -->
-        <figure class="col-md-6">
-          <img
-            src="../img/illustration.svg"
-            style="width: 100%; padding-left: 15%; padding-right: 15%"
-          />
+        <figure id="ilustracion" class="col-md-6">
+          <div></div>
         </figure>
         <!-- Fin Ilustracion -->
 
         <!-- Inicio Panel Login -->
         <div class="col-md-6">
-          <div id="panel-login">
+          <main>
             <!-- Inicio Bienvenida -->
-            <section
-              id="titulo"
-              class="col-12 d-flex justify-content-start align-items-center"
-            >
+            <header class="d-flex justify-content-start align-items-center">
               <h1>Bienvenido a</h1>
-              <img src="../img/logo.svg" alt="logo" style="height: 40px" />
-            </section>
+              <img src="../img/logo.svg" alt="logo" />
+            </header>
             <!-- Fin Bienvenida -->
 
             <!-- Inicio Login por redes sociales -->
             <!-- TODO: Agregar :hover y :active -->
-            <section id="social-login" class="col-12">
-              <button id="btn-google-login" class="alt-login btn" type="button">
-                <img
-                  src="../img/google.svg"
-                  alt="google"
-                  style="padding-right: 5%; height: 25px"
-                />
-                <label for="btn-google-login" style="cursor: pointer"
-                  >Ingresa con Google</label
+            <section class="col-md-12">
+              <button
+                id="btn-google-login"
+                class="alt-login btn w-100"
+                type="button"
+              >
+                <label for="btn-google-login"
+                  ><img src="../img/google.svg" alt="google" />Ingresar con
+                  Google</label
                 >
               </button>
               <button
                 id="btn-facebook-login"
-                class="alt-login btn"
+                class="alt-login btn w-100"
                 type="button"
               >
-                <img
-                  src="../img/facebook.svg"
-                  alt="google"
-                  style="padding-right: 5%; height: 25px"
-                />
-                <label for="btn-facebook-login" style="cursor: pointer"
-                  >Ingresa con Facebook</label
+                <label for="btn-facebook-login"
+                  ><img src="../img/facebook.svg" alt="facebook" />Ingresar con
+                  Facebook</label
                 >
               </button>
             </section>
             <!-- Fin Login por redes sociales -->
 
-            <!-- Inicio Separador -->
-            <span class="separator col-12">O</span>
-            <!-- Fin Separador -->
+            <!-- Separador -->
+            <span class="separator">O</span>
 
             <!-- Inicio Formulario de Login -->
-            <form action="#" method="post" class="col-12">
+            <form action="#" method="post">
               <!-- Inicio Input Correo -->
               <div class="input-group mb-3">
-                <img
-                  src="../img/email.svg"
-                  alt="email"
-                  class="input-group-text"
-                />
+                <span class="input-group-text">
+                  <img src="../img/email.svg" alt="email" />
+                </span>
                 <div class="form-floating">
                   <input
-                    id="floatingInputGroup"
-                    class="form-control"
                     type="text"
+                    class="form-control"
+                    id="floatingInputGroup"
                     placeholder="Correo"
                   />
                   <label for="floatingInputGroup">Correo</label>
@@ -104,7 +90,9 @@
 
               <!-- Inicio Input Contraseña -->
               <div class="input-group mb-3">
-                <img src="../img/key.svg" alt="key" class="input-group-text" />
+                <span class="input-group-text">
+                  <img src="../img/key.svg" alt="key" />
+                </span>
                 <div class="form-floating">
                   <input
                     type="password"
@@ -115,7 +103,7 @@
                   <label for="floatingPassword">Contraseña</label>
                 </div>
                 <!-- TODO: Agregar animación en la imagen del ojo (abierto/cerrado) -->
-                <button class="btn btn-outline-secondary" type="button">
+                <button class="btn btn-outline-secondary eye-btn" type="button">
                   <img src="../img/eye.svg" alt="" />
                 </button>
               </div>
@@ -126,16 +114,19 @@
                 class="d-flex justify-content-between"
                 style="font-size: smaller"
               >
-                <label class="form-check-label" for="check"
-                  ><input
+                <span>
+                  <input
                     id="check"
                     class="form-check-input"
                     type="checkbox"
                     checked="checked"
                   />
-                  Recuérdame</label
-                >
-                <a class="link" href="#"> ¿Olvidó su contraseña? </a>
+                  <label class="form-check-label" for="check">Recuérdame</label>
+                </span>
+
+                <span>
+                  <a class="link" href="#"> ¿Olvidó su contraseña? </a>
+                </span>
               </div>
               <!-- Fin Opciones contraseña -->
 
@@ -147,23 +138,21 @@
               >
                 Iniciar sesión
               </button>
-
               <!-- Fin Boton Enviar -->
-
-              <!-- Inicio Sugerencia registrar -->
-              <section class="d-flex justify-content-center">
-                <label style="font-size: smaller"
-                  >¿No tienes una cuenta?
-                  <a class="link" href="#">Regístrate</a></label
-                >
-              </section>
-              <!-- Fin Sugerencia registrar -->
             </form>
             <!-- Fin Formulario de Login -->
-          </div>
+            <!-- Inicio Sugerencia registrar -->
+            <div class="d-flex justify-content-center">
+              <span style="font-size: smaller">
+                <span>¿No tienes una cuenta?</span>
+                <a class="link" href="#">Regístrate</a>
+              </span>
+            </div>
+            <!-- Fin Sugerencia registrar -->
+          </main>
           <!-- Fin Panel Login -->
         </div>
-      </main>
+      </div>
       <!--Fin Fila Global -->
     </div>
     <!-- Fin Contenedor -->
