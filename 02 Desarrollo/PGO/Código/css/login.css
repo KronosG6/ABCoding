@@ -59,6 +59,16 @@ header h1 {
   font-size: small;
 }
 
+.alt-login:hover {
+  background: linear-gradient(90deg, #eeeeee, #f8f8f8, #eeeeee);
+  border-color: #f8f8f8 !important;
+}
+
+.alt-login:focus,
+.alt-login:active {
+  background: #f8f8f8 !important;
+}
+
 .input-group > .form-floating > .form-control,
 .input-group > .input-group-text,
 .input-group > .btn {
@@ -107,9 +117,18 @@ header h1 {
   border: 0px;
 }
 
+.main-btn:hover {
+  background-color: hsl(244, 92%, 70%) !important;
+}
+
 .link {
   color: var(--enfasis) !important;
   text-decoration: none;
+}
+
+.link:active,
+.link:focus {
+  color: hsl(244, 92%, 70%) !important;
 }
 
 /* Separador -- o -- */
