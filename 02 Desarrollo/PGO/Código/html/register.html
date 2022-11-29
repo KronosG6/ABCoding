@@ -67,7 +67,7 @@
             <span class="separator">O</span>
 
             <!-- Inicio Formulario de Registro -->
-            <form action="#" method="post">
+            <form id="register-form" action="">
               <!-- Inicio Input Correo -->
               <div class="input-group mb-3">
                 <span class="input-group-text">
@@ -79,6 +79,7 @@
                     class="form-control"
                     id="correo-floating-input"
                     placeholder="Correo"
+                    required
                   />
                   <label for="correo-floating-input">Correo</label>
                 </div>
@@ -96,6 +97,7 @@
                     class="form-control"
                     id="nombre-floating-input"
                     placeholder="Nombre"
+                    required
                   />
                   <label for="nombre-floating-input">Nombre</label>
                 </div>
@@ -113,6 +115,7 @@
                     class="form-control"
                     id="passwd-floating-input"
                     placeholder="Contraseña"
+                    required
                   />
                   <label for="passwd-floating-input">Contraseña</label>
                 </div>
@@ -134,6 +137,7 @@
                     class="form-control"
                     id="rep-passwd-floating-input"
                     placeholder="Repetir contraseña"
+                    required
                   />
                   <label for="rep-passwd-floating-input"
                     >Repetir contraseña</label
@@ -147,7 +151,6 @@
               <!-- Fin Input Repetir Contraseña -->
 
               <!-- Inicio Boton Enviar -->
-              <!-- TODO: Agregar :hover y :active -->
               <button
                 class="col-12 main-btn btn btn-primary w-100"
                 type="submit"
