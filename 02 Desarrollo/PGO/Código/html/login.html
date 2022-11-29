@@ -67,7 +67,7 @@
             <span class="separator">O</span>
 
             <!-- Inicio Formulario de Login -->
-            <form action="#" method="post">
+            <form id="login-form" action="">
               <!-- Inicio Input Correo -->
               <div class="input-group mb-3">
                 <span class="input-group-text">
@@ -79,6 +79,7 @@
                     class="form-control"
                     id="correo-floating-input"
                     placeholder="Correo"
+                    required
                   />
                   <label for="correo-floating-input">Correo</label>
                 </div>
@@ -94,10 +95,11 @@
                   <input
                     type="password"
                     class="form-control"
-                    id="floatingPassword"
+                    id="passwd-floating-input"
                     placeholder="Contraseña"
+                    required
                   />
-                  <label for="floatingPassword">Contraseña</label>
+                  <label for="passwd-floating-input">Contraseña</label>
                 </div>
                 <!-- TODO: Agregar animación en la imagen del ojo (abierto/cerrado) -->
                 <button class="btn btn-outline-secondary eye-btn" type="button">
