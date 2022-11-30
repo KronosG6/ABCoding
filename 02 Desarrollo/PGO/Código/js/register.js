@@ -1,4 +1,4 @@
-//! Validar contraseñas
+//* Implementar 2 tipos de mensajes: {error, success}
 //* Redireccionar a página principal tras registro exitoso
 import { auth, db } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
@@ -15,8 +15,14 @@ registerForm.addEventListener("submit", async (e) => {
   const name = registerForm["nombre-floating-input"].value;
   const email = registerForm["correo-floating-input"].value;
   const password = registerForm["passwd-floating-input"].value;
+  const repPassword = registerForm["rep-passwd-floating-input"].value;
 
   try {
+    // también se puede validar seguridad de la contraseña
+    if (password !== repPassword) {
+      throw "diffPasswd";
+    }
+
     const userCredentials = await createUserWithEmailAndPassword(
       auth,
       email,
@@ -24,11 +30,13 @@ registerForm.addEventListener("submit", async (e) => {
     );
 
     const docRef = await setDoc(doc(db, "usuario", userCredentials.user.uid), {
-      nombre: name
+      nombre: name,
     });
     showToast(`Bienvenido ${name}`);
   } catch (error) {
-    if (error.code === "auth/email-already-in-use") {
+    if (error === "diffPasswd") {
+      showToast("Las contraseñas deben ser iguales");
+    } else if (error.code === "auth/email-already-in-use") {
       showToast("Correo ya está en uso");
     } else if (error.code === "auth/invalid-email") {
       showToast("Correo inválido");
