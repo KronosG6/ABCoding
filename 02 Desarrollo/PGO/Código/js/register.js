@@ -1,4 +1,3 @@
-// TODO: Integrar mensajes tipo toast
 //! Validar contraseñas
 //* Redireccionar a página principal tras registro exitoso
 import { auth, db } from "./firebase.js";
@@ -27,16 +26,23 @@ registerForm.addEventListener("submit", async (e) => {
     const docRef = await setDoc(doc(db, "usuario", userCredentials.user.uid), {
       nombre: name
     });
-    console.log(`Bienvenid@ ${name}`);
+    showToast(`Bienvenido ${name}`);
   } catch (error) {
     if (error.code === "auth/email-already-in-use") {
-      console.log("Correo ya está en uso");
+      showToast("Correo ya está en uso");
     } else if (error.code === "auth/invalid-email") {
-      console.log("Correo inválido");
+      showToast("Correo inválido");
     } else if (error.code === "auth/weak-password") {
-      console.log("Contraseña demasiado débil");
+      showToast("Contraseña demasiado débil");
     } else if (error.code) {
-      console.log("Algo salió mal");
+      showToast("Algo salió mal");
     }
   }
 });
+
+function showToast(message) {
+  const toastMessage = document.getElementById("toast-message");
+  const toast = new bootstrap.Toast(document.getElementById("myToast"));
+  toastMessage.innerText = message;
+  toast.show();
+}
