@@ -8,6 +8,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 const loginForm = document.querySelector("#login-form");
+const passwdBtn = document.querySelector("#passwd-btn");
+const passwdInput = document.querySelector("#passwd-floating-input");
 
 loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -31,6 +33,16 @@ loginForm.addEventListener("submit", async (e) => {
       showToast("Algo salió mal");
     }
   }
+});
+
+passwdBtn.addEventListener("mousedown", () => {
+  passwdInput.type = "text";
+  passwdBtn.firstElementChild.innerText = "visibility";
+});
+
+passwdBtn.addEventListener("mouseup", () => {
+  passwdInput.type = "password";
+  passwdBtn.firstElementChild.innerText = "visibility_off";
 });
 
 onAuthStateChanged(auth, async (user) => {

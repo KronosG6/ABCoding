@@ -8,6 +8,10 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 const registerForm = document.querySelector("#register-form");
+const passwdBtn = document.querySelector("#passwd-btn");
+const passwdInput = document.querySelector("#passwd-floating-input");
+const repPasswdBtn = document.querySelector("#rep-passwd-btn");
+const repPasswdInput = document.querySelector("#rep-passwd-floating-input");
 
 registerForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -46,6 +50,26 @@ registerForm.addEventListener("submit", async (e) => {
       showToast("Algo salió mal");
     }
   }
+});
+
+passwdBtn.addEventListener("mousedown", () => {
+  passwdInput.type = "text";
+  passwdBtn.firstElementChild.innerText = "visibility";
+});
+
+passwdBtn.addEventListener("mouseup", () => {
+  passwdInput.type = "password";
+  passwdBtn.firstElementChild.innerText = "visibility_off";
+});
+
+repPasswdBtn.addEventListener("mousedown", () => {
+  repPasswdInput.type = "text";
+  repPasswdBtn.firstElementChild.innerText = "visibility";
+});
+
+repPasswdBtn.addEventListener("mouseup", () => {
+  repPasswdInput.type = "password";
+  repPasswdBtn.firstElementChild.innerText = "visibility_off";
 });
 
 function showToast(message) {
