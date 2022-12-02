@@ -1,6 +1,4 @@
 <!-- TODO: Agregar ícono de página -->
-<!-- * SVG en lugar de IMG  -->
-<!-- * Agregar CDN para iconos -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +13,7 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/login.css" />
-    
+
     <!-- Importa el módulo login.js -->
     <script type="module" src="../js/login.js"></script>
   </head>
@@ -71,7 +69,7 @@
               <!-- Inicio Input Correo -->
               <div class="input-group mb-3">
                 <span class="input-group-text">
-                  <img src="../img/email.svg" alt="email" />
+                  <i class="material-symbols-outlined"> mail </i>
                 </span>
                 <div class="form-floating">
                   <input
@@ -89,7 +87,7 @@
               <!-- Inicio Input Contraseña -->
               <div class="input-group mb-3">
                 <span class="input-group-text">
-                  <img src="../img/key.svg" alt="key" />
+                  <i class="material-symbols-outlined"> key </i>
                 </span>
                 <div class="form-floating">
                   <input
@@ -101,9 +99,12 @@
                   />
                   <label for="passwd-floating-input">Contraseña</label>
                 </div>
-                <!-- TODO: Agregar animación en la imagen del ojo (abierto/cerrado) -->
-                <button class="btn btn-outline-secondary eye-btn" type="button">
-                  <img src="../img/eye.svg" alt="" />
+                <button
+                  id="passwd-btn"
+                  class="btn btn-outline-secondary eye-btn"
+                  type="button"
+                >
+                  <i class="material-symbols-outlined"> visibility_off </i>
                 </button>
               </div>
               <!-- Fin Input Contraseña -->
@@ -154,6 +155,30 @@
       <!--Fin Fila Global -->
     </div>
     <!-- Fin Contenedor -->
+
+    <!-- Inicio Toast Login -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div
+        id="myToast"
+        class="toast align-items-center"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div id="toast-message" class="toast-body">
+            This is a toast message.
+          </div>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Toast Login -->
 
     <!-- Boostrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
