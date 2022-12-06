@@ -1,0 +1,204 @@
+<!-- TODO: Agregar ícono de página -->
+<!-- TODO: Agregar animaciones a elementos -->
+<!-- FIXME: Proporciones (reactive) -->
+<!-- FIXME: SVG en lugar de IMG  -->
+<!-- FIXME: Normalizar estilos -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <!-- Bootstrap 5.2.2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <!-- Inicio Contenedor -->
+    <div class="container-fluid">
+      <!--Inicio Fila Global -->
+      <div class="row vh-100 align-items-center">
+        <!-- Inicio Ilustracion -->
+        <div id="ilustracion" class="col-md-6">
+          <div
+            class="vh-100"
+            style="
+              background-image: url(../img/illustration.svg);
+              background-position: center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              margin-left: 15%;
+              margin-right: 15%;
+            "
+          ></div>
+        </div>
+        <!-- Fin Ilustracion -->
+
+        <!-- Inicio Panel Login -->
+        <div class="col-md-6">
+          <div id="panel-login">
+            <!-- Inicio Bienvenida -->
+            <div class="row">
+              <div
+                id="titulo"
+                class="d-flex justify-content-start align-items-center"
+              >
+                <h1>Bienvenido a&nbsp;</h1>
+                <img src="../img/logo.svg" alt="logo" style="height: 40px" />
+              </div>
+            </div>
+            <!-- Fin Bienvenida -->
+
+            <!-- Inicio Login por redes sociales -->
+            <!-- TODO: Agregar :hover y :active -->
+            <div class="row">
+              <div class="col-md-12">
+                <button
+                  id="btn-google-login"
+                  class="alt-login btn w-100"
+                  type="button"
+                >
+                  <img
+                    src="../img/google.svg"
+                    alt="google"
+                    style="padding-right: 5%; height: 25px"
+                  />
+                  <label for="btn-google-login" style="cursor: pointer"
+                    >Ingresa con Google</label
+                  >
+                </button>
+              </div>
+              <div class="col-md-12">
+                <button
+                  id="btn-facebook-login"
+                  class="alt-login btn w-100"
+                  type="button"
+                >
+                  <div>
+                    <img
+                      src="../img/facebook.svg"
+                      alt="google"
+                      style="padding-right: 5%; height: 25px"
+                    />
+                    <label for="btn-facebook-login" style="cursor: pointer"
+                      >Ingresa con Facebook</label
+                    >
+                  </div>
+                </button>
+              </div>
+            </div>
+            <!-- Fin Login por redes sociales -->
+
+            <!-- Inicio Separador -->
+            <div class="row">
+              <span class="separator">O</span>
+            </div>
+            <!-- Fin Separador -->
+
+            <!-- Inicio Formulario de Login -->
+            <div class="row">
+              <form action="#" method="post">
+                <!-- Inicio Input Correo -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text">
+                    <img src="../img/email.svg" alt="email" />
+                  </span>
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingInputGroup"
+                      placeholder="Correo"
+                    />
+                    <label for="floatingInputGroup">Correo</label>
+                  </div>
+                </div>
+                <!-- Fin Input Correo -->
+
+                <!-- Inicio Input Contraseña -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text">
+                    <img src="../img/key.svg" alt="key" />
+                  </span>
+                  <div class="form-floating">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="floatingPassword"
+                      placeholder="Contraseña"
+                    />
+                    <label for="floatingPassword">Contraseña</label>
+                  </div>
+                  <!-- TODO: Agregar animación en la imagen del ojo (abierto/cerrado) -->
+                  <button class="btn btn-outline-secondary" type="button">
+                    <img src="../img/eye.svg" alt="" />
+                  </button>
+                </div>
+                <!-- Fin Input Contraseña -->
+
+                <!-- Inicio Opciones contraseña -->
+                <div
+                  class="d-flex justify-content-between"
+                  style="font-size: smaller"
+                >
+                  <span>
+                    <input
+                      id="check"
+                      class="form-check-input"
+                      type="checkbox"
+                      checked="checked"
+                    />
+                    <label class="form-check-label" for="check"
+                      >Recuérdame</label
+                    >
+                  </span>
+
+                  <span>
+                    <a class="link" href="#"> ¿Olvidó su contraseña? </a>
+                  </span>
+                </div>
+                <!-- Fin Opciones contraseña -->
+
+                <!-- Inicio Boton Enviar -->
+                <!-- TODO: Agregar :hover y :active -->
+                <div class="col-12">
+                  <button class="bt-login btn btn-primary w-100" type="submit">
+                    Iniciar sesión
+                  </button>
+                </div>
+
+                <!-- Fin Boton Enviar -->
+
+                <!-- Inicio Sugerencia registrar -->
+                <div class="d-flex justify-content-center">
+                  <span style="font-size: smaller">
+                    <span>¿No tienes una cuenta?</span>
+                    <a class="link" href="#">Regístrate</a>
+                  </span>
+                </div>
+                <!-- Fin Sugerencia registrar -->
+              </form>
+            </div>
+            <!-- Fin Formulario de Login -->
+          </div>
+          <!-- Fin Panel Login -->
+        </div>
+      </div>
+      <!--Fin Fila Global -->
+    </div>
+    <!-- Fin Contenedor -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
