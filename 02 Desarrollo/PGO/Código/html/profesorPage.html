@@ -10,10 +10,10 @@
 
   <body>
     <header>
-      <nav id = "left">
-        <button id = "logo">
+      <div id = "header-left">
+        <a href="#" id = "header-logo">
           <img src = "../img/logo.svg" alt = "Logo de ProfeGO"/>
-        </button>
+        </a>
         <div class = "searchbar">
           <div class = "searchbar-wrapper">
             <form class = "searchbar-form" action = "#" method = "post">
@@ -24,14 +24,116 @@
             </form>
           </div>
         </div>
+      </div>
+      <nav id = "header-right">
+        <a href = "./contactos.html" id = "header-profile">
+          <img src = "../img/account_circle.svg" alt = "Foto de perfil">
+          <h4>Tu cuenta</h4>
+        </a>
+        <a href = "./registroProfesor.html">
+          <button class = "register-button">
+            Dar clases particulares
+          </button>
+        </a>
       </nav>
-      <nav id = "right">
-        <button id = "profile">
-          <img src = "../img/user-circle.svg" alt = "Foto de perfil"/>
-        </button>
-        <button id = "registerProfe">
-          Dar clases particulares
-        </button>
     </header>
+
+    <main>
+      <section id = "register-section">
+        <div class = "introduction">
+          <h2>¡Empieza a dar clases particulares!</h2>
+          <p>Consigue alumnos a los que impartir clase anunciándote en ProfeGO. <br>
+            Cada día miles de alumnos encuentran su profesor ideal.</p>
+          <a href = "./registroProfesor.html">
+            <button class = "register-button">
+              Regístrate gratis
+            </button>
+          </a>
+        </div>
+        <img src = "../img/profesor-image.svg" alt = "Ilustración de un profesor dando clase"/>
+      </section>
+
+      <section id = "tutorial-section">
+        <h2>¿Cómo funciona ProfeGO?</h2>
+        <div id = "group-tutorial-card">
+          <div class = "tutorial-card">
+            <h3>1</h3>
+            <h4>Regístrate gratis</h4>
+            <p>Publica tu anuncio gratuitamente y completa tus datos. No te llevará más de 2 minutos.</p>
+          </div>
+          <img src = "../img/arrow_forward.svg" alt = "Flecha hacia la derecha"/>
+          <div class = "tutorial-card">
+            <h3>2</h3>
+            <h4>Recibe solicitudes de alumnos</h4>
+            <p>Podrán contactarte a través de nuestra mensajería instantánea y solicitarte clase.</p>
+          </div>
+          <img src = "../img/arrow_forward.svg" alt = "Flecha hacia la derecha"/>
+          <div class = "tutorial-card">
+            <h3>3</h3>
+            <h4>Empieza a dar clases</h4>
+            <p>Concreta las clases con tus alumnos y empieza a dar clases particulares.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id = "reasons-section">
+        <h2>¿Por qué dar clases particulares con ProfeGO?</h2>
+        <div id = "group-reasons-card">
+          <div class = "reasons-card">
+            <img src = "../img/redeem.svg" alt = "Icono de un gratuito"/>
+            <h4>Es gratuito</h4>
+            <p>Crea tu perfil completamente gratis en ProfeGO.</p>
+          </div>
+          <div class = "reasons-card">
+            <img src = "../img/payments.svg" alt = "Icono de un dinero"/>
+            <h4>Gana dinero</h4>
+            <p>Obtén ingresos enseñando tus materias favoritas.</p>
+          </div>
+          <div class = "reasons-card">
+            <img src = "../img/credit_card_off.svg" alt = "Icono de una tarjeta de crédito"/>
+            <h4>Sin comisiones</h4>
+            <p>No te aplicamos ninguna comisión, el 100% de los ingresos son para ti.</p>
+          </div>
+          <div class = "reasons-card">
+            <img src = "../img/handshake.svg" alt = "Icono de una apretada de manos"/>
+            <h4>Tú decides el precio</h4>
+            <p>Elige el precio de tus clases, si te desplazas y cuánto cobras por ello.</p>
+          </div>
+          <div class = "reasons-card">
+            <img src = "../img/smartphone.svg" alt = "Icono de un teléfono móvil"/>
+            <h4>Al alcance de tu teléfono</h4>
+            <p>Verifica tu perfil para que los alumnos puedan contactarte.</p>
+          </div>
+          <div class = "reasons-card">
+            <img src = "../img/group.svg" alt = "Icono de un grupo de personas"/>
+            <h4>Alumnos en tu ciudad</h4>
+            <p>Miles de profesores encuentran alumnos en su ciudad cada día.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id = "group-footer-links">
+        <nav class = "footer-links">
+          <h4>Términos y condiciones</h4>
+          <a href = "#">Política de privacidad</a>
+          <a href = "#">Condiciones de uso para profesores</a>
+          <a href = "#">Condiciones de uso para alumnos</a>
+        </nav>
+        <nav class = "footer-links">
+          <h4>Descubre más</h4>
+          <a href = "#">Ayuda</a>
+          <a href = "#">¿Cómo funciona?</a>
+          <a href = "#">Preguntas frecuentes</a>
+        </nav>
+        <nav class = "footer-links">
+          <h4>Contacto</h4>
+          <a href = "#">UNMSM</a>
+          <a href = "#">Correo eléctronico</a>
+          <a href = "#">Número telefónico</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
