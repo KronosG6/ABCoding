@@ -11,6 +11,8 @@ import {
   setDoc,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
+const redirectPage = "../html/busqueda.html";
+
 const registerForm = document.querySelector("#register-form");
 const passwdBtn = document.querySelector("#passwd-btn");
 const passwdInput = document.querySelector("#passwd-floating-input");
@@ -39,6 +41,10 @@ registerForm.addEventListener("submit", async (e) => {
       nombre: name,
     });
     showToast(`Bienvenido ${name}`);
+    // Se redirige a otra página
+    setTimeout(() => {
+      window.location.href = redirectPage;
+    }, "1500");
   } catch (error) {
     switch (error.code) {
       case "diffPasswd":
@@ -68,6 +74,10 @@ googleBtn.addEventListener("click", async () => {
       nombre: userCredentials.user.displayName,
     });
     showToast(`Bienvenido ${userCredentials.user.displayName}`);
+    // Se redirige a otra página
+    setTimeout(() => {
+      window.location.href = redirectPage;
+    }, "1500");
   } catch (error) {
     switch (error.code) {
       case "auth/popup-closed-by-user":

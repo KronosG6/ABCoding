@@ -1,4 +1,3 @@
-//* Redireccionar a página principal tras registro exitoso
 //* Agregar funcionalidad al checkbox (Recuérdame)
 //* Agregar funcionalidad al link (Olvidó su contraseña)
 import { auth, db } from "./firebase.js";
@@ -13,6 +12,8 @@ import {
   setDoc,
   getDoc,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+
+const redirectPage = "../html/busqueda.html";
 
 const loginForm = document.querySelector("#login-form");
 const passwdBtn = document.querySelector("#passwd-btn");
@@ -33,6 +34,10 @@ loginForm.addEventListener("submit", async (e) => {
     const docRef = doc(db, "usuario", userCredentials.user.uid);
     const docSnap = await getDoc(docRef);
     showToast(`Bienvenido ${docSnap.data().nombre}`);
+    // Se redirige a otra página
+    setTimeout(() => {
+      window.location.href = redirectPage;
+    }, "1500");
   } catch (error) {
     switch (error.code) {
       case "auth/user-not-found":
@@ -56,6 +61,10 @@ googleBtn.addEventListener("click", async () => {
       nombre: userCredentials.user.displayName,
     });
     showToast(`Bienvenido ${userCredentials.user.displayName}`);
+    // Se redirige a otra página
+    setTimeout(() => {
+      window.location.href = redirectPage;
+    }, "1500");
   } catch (error) {
     switch (error.code) {
       case "auth/popup-closed-by-user":
