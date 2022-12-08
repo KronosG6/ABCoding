@@ -5,9 +5,11 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebas
 
 // SDK's agregados - CDN de Firebase
 // Autenticación
-import { getAuth } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 // Firestore
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js"
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+// Storage
+import { getStorage } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -27,3 +29,6 @@ export const auth = getAuth(app);
 
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getFirestore(app);
+
+// Initialize Cloud Storage and get a reference to the service
+export const storage = getStorage(app);
