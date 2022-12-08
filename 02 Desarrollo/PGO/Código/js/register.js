@@ -28,7 +28,7 @@ registerForm.addEventListener("submit", async (e) => {
   try {
     // también se puede validar seguridad de la contraseña
     if (password !== repPassword) {
-      throw "diffPasswd";
+      throw { code: "diffPasswd" };
     }
     const userCredentials = await createUserWithEmailAndPassword(
       auth,
@@ -40,16 +40,22 @@ registerForm.addEventListener("submit", async (e) => {
     });
     showToast(`Bienvenido ${name}`);
   } catch (error) {
-    if (error === "diffPasswd") {
-      showToast("Las contraseñas deben ser iguales");
-    } else if (error.code === "auth/email-already-in-use") {
-      showToast("Correo ya está en uso");
-    } else if (error.code === "auth/invalid-email") {
-      showToast("Correo inválido");
-    } else if (error.code === "auth/weak-password") {
-      showToast("Contraseña demasiado débil");
-    } else if (error.code) {
-      showToast("Algo salió mal");
+    switch (error.code) {
+      case "diffPasswd":
+        showToast("Las contraseñas deben ser iguales");
+        break;
+      case "auth/email-already-in-use":
+        showToast("Correo ya está en uso");
+        break;
+      case "auth/invalid-email":
+        showToast("Correo inválido");
+        break;
+      case "auth/weak-password":
+        showToast("Contraseña demasiado débil");
+        break;
+      default:
+        showToast("Algo salió mal");
+        break;
     }
   }
 });
@@ -63,17 +69,23 @@ googleBtn.addEventListener("click", async () => {
     });
     showToast(`Bienvenido ${userCredentials.user.displayName}`);
   } catch (error) {
-    if (error.code === "auth/popup-closed-by-user") {
-      showToast("Operación cancelada");
-    } else if (error.code === "auth/account-exists-with-different-credential") {
-      showToast("Ya existe una cuenta con este correo");
-    } else if (error.code === "auth/cancelled-popup-request") {
-      showToast("El navegador impidió abrir un Pop-Up");
-    } else if (error.code === "auth/unauthorized-domain") {
-      showToast("Dominio no autorizado");
-      console.log("Utilizar localhost en lugar de 127.0.0.1");
-    } else if (error.code) {
-      showToast("Algo salió mal");
+    switch (error.code) {
+      case "auth/popup-closed-by-user":
+        showToast("Operación cancelada");
+        break;
+      case "auth/account-exists-with-different-credential":
+        showToast("Ya existe una cuenta con este correo");
+        break;
+      case "auth/cancelled-popup-request":
+        showToast("El navegador impidió abrir un Pop-Up");
+        break;
+      case "auth/unauthorized-domain":
+        showToast("Dominio no autorizado");
+        console.log("Utilizar localhost en lugar de 127.0.0.1");
+        break;
+      default:
+        showToast("Algo salió mal");
+        break;
     }
   }
 });
