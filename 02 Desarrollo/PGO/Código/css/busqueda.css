@@ -123,15 +123,51 @@ a{
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    padding-right: 20px;
+    padding: 0px 24px;
 }
 
 .colum1{
     position: relative;
     text-align: left;
+    width: 450px;
 }
+
+.colum1 h2{
+    font-size: 20px;
+}
+
+.colum1 p{
+    font-size: 16px;
+}
+
 .colum2{
     position: relative;
+    text-align: center;
+    align-items: center;
+    width: 250px;
+}
+
+.estrellas input{
+    display: none;
+}
+
+.estrellas label{
+    font-size: 30px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+
+.estrellas label::before{
+    content: '★';
+}
+
+.boton-contactar{
+    margin: 0 auto;
+    width: 100px;
+    padding: 10px 15px;
+    color: #4C40F7;
+    border: 1px solid #4C40F7;
+    border-radius: 20px;
 }
 
 /* footer */
