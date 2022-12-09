@@ -100,24 +100,30 @@ googleBtn.addEventListener("click", async () => {
   }
 });
 
-passwdBtn.addEventListener("mousedown", () => {
-  passwdInput.type = "text";
-  passwdBtn.firstElementChild.innerText = "visibility";
+passwdBtn.addEventListener("click", () => {
+  switch (passwdInput.type) {
+    case "password":
+      passwdInput.type = "text";
+      passwdBtn.firstElementChild.innerText = "visibility";
+      break;
+    case "text":
+      passwdInput.type = "password";
+      passwdBtn.firstElementChild.innerText = "visibility_off";
+      break;
+  }
 });
 
-passwdBtn.addEventListener("mouseup", () => {
-  passwdInput.type = "password";
-  passwdBtn.firstElementChild.innerText = "visibility_off";
-});
-
-repPasswdBtn.addEventListener("mousedown", () => {
-  repPasswdInput.type = "text";
-  repPasswdBtn.firstElementChild.innerText = "visibility";
-});
-
-repPasswdBtn.addEventListener("mouseup", () => {
-  repPasswdInput.type = "password";
-  repPasswdBtn.firstElementChild.innerText = "visibility_off";
+repPasswdBtn.addEventListener("click", () => {
+  switch (repPasswdInput.type) {
+    case "password":
+      repPasswdInput.type = "text";
+      repPasswdBtn.firstElementChild.innerText = "visibility";
+      break;
+    case "text":
+      repPasswdInput.type = "password";
+      repPasswdBtn.firstElementChild.innerText = "visibility_off";
+      break;
+  }
 });
 
 function showToast(message) {

@@ -204,6 +204,11 @@ header img {
   box-shadow: 0 0;
 }
 
+/* se anula comportamiento MS Edge */
+::-ms-reveal {
+  display: none
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
