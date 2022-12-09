@@ -16,6 +16,10 @@ header{
     border-bottom: 1px solid #6B6B6B;
 }
 
+a{
+    text-decoration: none;
+}
+
 .tu-cuenta, .dar-clases{
     padding: 15px;
 }
@@ -57,7 +61,6 @@ header{
 }
 
 .buscador{
-    /*background: #ccc;*/
     width: 350px;
     justify-content: center;
     align-items: center;
@@ -99,6 +102,36 @@ header{
     height: 30px;
     border: 1px solid #00113B;
     border-radius: 10px;
+}
+
+/* Catalogo */
+
+.encabezado{
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.img img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding-right: 20px;
+}
+
+.colum1{
+    position: relative;
+    text-align: left;
+}
+.colum2{
+    position: relative;
 }
 
 /* footer */
