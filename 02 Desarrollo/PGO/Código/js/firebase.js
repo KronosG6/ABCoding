@@ -3,6 +3,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebas
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+/*import {getDatabase} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";*/
+
 // SDK's agregados - CDN de Firebase
 // Autenticación
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"
@@ -22,3 +24,7 @@ export const app = initializeApp(firebaseConfig);
 
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
+
+
+/*//Initialize Firebase Realtime Database and get a reference to the service
+export const database = getDatabase(app);*/
