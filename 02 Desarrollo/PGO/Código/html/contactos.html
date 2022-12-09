@@ -5,19 +5,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contactos</title>
-  <link rel="stylesheet" href="/ABCoding/02 Desarrollo/PGO/Código/css/contactos.css">
+  <link rel="stylesheet" href="../css/contactos.css">
+  <link rel="stylesheet" href="../css/profesorPage.css">
+
   <script src="https://kit.fontawesome.com/c21c42b55a.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
+<script type="module" src="../js/contactos.js"></script>
 
 </head>
 <body>
+  <header>
+    <div id = "header-left">
+      <a href="../index.html" id = "header-logo">
+        <img src = "../img/logo.svg" alt = "Logo de ProfeGO"/>
+      </a>
+      <div class = "searchbar">
+        <div class = "searchbar-wrapper">
+          <form class = "searchbar-form" action = "#" method = "post">
+            <div class = "searchbar-input-wrapper">
+              <input class = "searchbar-input" type = "search" placeholder = "Buscar" name = "searchbar-input"/>
+            </div>
+            <input class = "searchbar-submit" type = "submit" value = "🔎"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <nav id = "header-right">
+      <a href = "./login.html" id = "header-profile">
+        <img src = "../img/account_circle.svg" alt = "Foto de perfil">
+        <h4>Ingresar</h4>
+      </a>
+      <a href = "./registroProfesor.html">
+        <button class = "register-button">
+          Dar clases particulares
+        </button>
+      </a>
+    </nav>
+  </header>
   <section class="container-contacts">
     <div class="items-logo-text">
       <div class="item-logo">
-          <img src="/ABCoding/02 Desarrollo/PGO/Código/img/logo.svg" alt="Logo">
+          <img src="../img/logo.svg" alt="Logo">
       </div>
       <div class="item-text">
           <h2>Chat</h2>
@@ -37,45 +67,10 @@
           </div>
     
           <div class="section-users">
+            
             <div class="user">
               <div class="avatar">
-                <img src="/ABCoding/02 Desarrollo/PGO/Código/img/user.PNG" alt="perfil">
-                <span class="state-user-online"></span>
-              </div>
-              <div class="info-user">
-                <span class="name-user">Nombre</span>
-                <span class="last-message">Mensaje</span>
-              </div>
-              <span class="notis">3</span>
-            </div>
-      
-            <div class="user">
-              <div class="avatar">
-                <img src="/ABCoding/02 Desarrollo/PGO/Código/img/estudiante2.jpeg" alt="perfil">
-                <span class="state-user-online"></span>
-              </div>
-              <div class="info-user">
-                <span class="name-user">Nombre</span>
-                <span class="last-message">Mensaje</span>
-              </div>
-              <span class="notis">3</span>
-            </div>
-
-            <div class="user">
-              <div class="avatar">
-                <img src="/ABCoding/02 Desarrollo/PGO/Código/img/estudiante2.jpeg" alt="perfil">
-                <span class="state-user-online"></span>
-              </div>
-              <div class="info-user">
-                <span class="name-user">Nombre</span>
-                <span class="last-message">Mensaje</span>
-              </div>
-              <span class="notis">3</span>
-            </div>
-
-            <div class="user">
-              <div class="avatar">
-                <img src="/ABCoding/02 Desarrollo/PGO/Código/img/estudiante2.jpeg" alt="perfil">
+                <img src="../img/user.PNG" alt="perfil">
                 <span class="state-user-online"></span>
               </div>
               <div class="info-user">
@@ -100,7 +95,7 @@
           <div class="section-users">
             <div class="user">
               <div class="avatar">
-                <img src="/ABCoding/02 Desarrollo/PGO/Código/img/profeJ.jpeg" alt="perfil">
+                <img src="../img/profeJ.jpeg" alt="perfil">
                 <span class="state-user-online"></span>
               </div>
               <div class="info-user">
@@ -110,17 +105,6 @@
               <span class="notis">3</span>
             </div>
       
-            <div class="user">
-              <div class="avatar">
-                <img src="/ABCoding/02 Desarrollo/PGO/Código/img/profesor.jpg" alt="perfil">
-                <span class="state-user-online"></span>
-              </div>
-              <div class="info-user">
-                <span class="name-user">Nombre</span>
-                <span class="last-message">Mensaje</span>
-              </div>
-              <span class="notis">3</span>
-            </div>
           </div>
         </div>
       </div>
@@ -128,7 +112,7 @@
       <div class="section-chat">
         <div class="user-selected">
           <div class="avatar">
-            <img src="/ABCoding/02 Desarrollo/PGO/Código/img/user.PNG" alt="perfil">
+            <img src="../img/user.PNG" alt="perfil">
           </div>
           <div class="info-user-selected">
             <span class="name-user">Nombre</span>
@@ -136,7 +120,7 @@
           </div>
         </div>
   
-        <div class="section-message">
+        <div class="section-message" id="bodyContent">
           <div class="box-left">
             <div class="message m-left">
               <p>hola mundo</p>
@@ -152,7 +136,7 @@
               <span>12:00</span>
             </div>
           </div>
-
+<!--
           <div class="box-left">
             <div class="message m-left">
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt nam nisi eius ratione dolor eos quasi? In repellat quae sed laborum ullam libero voluptates quaerat reiciendis maxime impedit! Quas, facere.</p>
@@ -168,23 +152,8 @@
               <span>12:00</span>
             </div>
           </div>
-
-
-          <div class="box-left">
-            <div class="message m-left">
-              <p>hola amigo, cuanto esta el curso</p>
-              <span>12:00</span>
-            </div>
-            <div class="space"></div>
-          </div>
-
-          <div class="box-right">
-            <div class="space"></div>
-            <div class="message m-right">
-              <p>hola mundo khdjsfdhjshdjhfsd</p>
-              <span>12:00</span>
-            </div>
-          </div>
+        -->
+         
 
         </div>
   
@@ -194,8 +163,8 @@
               <i class="fa-solid fa-circle-plus"></i>
             </button>
   
-            <textarea placeholder="Escribe un mensaje"></textarea>
-            <button type="button" class="send">
+            <textarea id='message' placeholder="Escribe un mensaje"></textarea>
+            <button id='submit' type="submit" class="send">
               <i class="fas fa-paper-plane"></i>
             </button>
           </div>

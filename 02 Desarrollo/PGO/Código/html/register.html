@@ -1,9 +1,4 @@
 <!-- TODO: Agregar ícono de página -->
-<!-- TODO: Agregar animaciones a elementos -->
-<!-- FIXME: Proporciones (reactive) -->
-<!-- FIXME: SVG en lugar de IMG  -->
-<!-- FIXME: Normalizar estilos -->
-<!-- FIXME: Disminuir tamaño de los input del formulario -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -11,15 +6,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Registro</title>
-    <!-- Bootstrap 5.2.2 CSS -->
+    <!-- Bootstrap CSS CDN -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/login.css" />
+
+    <!-- Importa el módulo register.js -->
+    <script type="module" src="../js/register.js"></script>
   </head>
   <body>
     <!-- Inicio Contenedor -->
@@ -27,183 +23,158 @@
       <!--Inicio Fila Global -->
       <div class="row vh-100 align-items-center">
         <!-- Inicio Ilustracion -->
-        <div id="ilustracion" class="col-md-6">
-          <div
-            class="vh-100"
-            style="
-              background-image: url(../img/illustration.svg);
-              background-position: center;
-              background-size: contain;
-              background-repeat: no-repeat;
-              margin-left: 15%;
-              margin-right: 15%;
-            "
-          ></div>
-        </div>
+        <figure id="ilustracion" class="col-md-6">
+          <div></div>
+        </figure>
         <!-- Fin Ilustracion -->
 
         <!-- Inicio Panel Login -->
         <div class="col-md-6">
-          <div id="panel-login">
+          <main>
             <!-- Inicio Bienvenida -->
-            <div class="row">
-              <div
-                id="titulo"
-                class="d-flex justify-content-start align-items-center"
-              >
-                <h1>Bienvenido a&nbsp;</h1>
-                <img src="../img/logo.svg" alt="logo" style="height: 40px" />
-              </div>
-            </div>
+            <header class="d-flex justify-content-start align-items-center">
+              <h1>Bienvenido a</h1>
+              <a href="../index.html"
+                ><img src="../img/logo.svg" alt="logo"
+              /></a>
+            </header>
             <!-- Fin Bienvenida -->
 
-            <!-- Inicio Login por redes sociales -->
-            <!-- TODO: Agregar :hover y :active -->
-            <div class="row">
-              <div class="col-md-12">
-                <button
-                  id="btn-google"
-                  class="alt-login btn w-100"
-                  type="button"
+            <!-- Inicio Registro por redes sociales -->
+            <section class="col-md-12">
+              <button id="btn-google" class="alt-login btn w-100" type="button">
+                <label
+                  ><img src="../img/google.svg" alt="google" />Registrarme con
+                  Google</label
                 >
-                  <img
-                    src="../img/google.svg"
-                    alt="google"
-                    style="padding-right: 5%; height: 25px"
+              </button>
+              <button
+                id="btn-facebook"
+                class="alt-login btn w-100"
+                type="button"
+              >
+                <label
+                  ><img src="../img/facebook.svg" alt="facebook" />Registrarme
+                  con Facebook</label
+                >
+              </button>
+            </section>
+            <!-- Fin Registro por redes sociales -->
+
+            <!-- Separador -->
+            <span class="separator">O</span>
+
+            <!-- Inicio Formulario de Registro -->
+            <form id="register-form" action="">
+              <!-- Inicio Input Nombre -->
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="material-symbols-outlined"> account_circle </i>
+                </span>
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre-floating-input"
+                    placeholder="Nombre"
+                    required
                   />
-                  <label for="btn-google" style="cursor: pointer"
-                    >Registrarme con Google</label
-                  >
-                </button>
+                  <label for="nombre-floating-input">Nombre</label>
+                </div>
               </div>
-              <div class="col-md-12">
+              <!-- Fin Input Nombre -->
+
+              <!-- Inicio Input Correo -->
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="material-symbols-outlined"> mail </i>
+                </span>
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="correo-floating-input"
+                    placeholder="Correo"
+                    required
+                  />
+                  <label for="correo-floating-input">Correo</label>
+                </div>
+              </div>
+              <!-- Fin Input Correo -->
+
+              <!-- Inicio Input Contraseña -->
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="material-symbols-outlined"> key </i>
+                </span>
+                <div class="form-floating">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="passwd-floating-input"
+                    placeholder="Contraseña"
+                    required
+                  />
+                  <label for="passwd-floating-input">Contraseña</label>
+                </div>
                 <button
-                  id="btn-facebook"
-                  class="alt-login btn w-100"
+                  id="passwd-btn"
+                  class="btn btn-outline-secondary eye-btn"
                   type="button"
+                  tabindex="-1"
                 >
-                  <div>
-                    <img
-                      src="../img/facebook.svg"
-                      alt="google"
-                      style="padding-right: 5%; height: 25px"
-                    />
-                    <label for="btn-facebook" style="cursor: pointer"
-                      >Registrarme con Facebook</label
-                    >
-                  </div>
+                  <i class="material-symbols-outlined"> visibility_off </i>
                 </button>
               </div>
+              <!-- Fin Input Contraseña -->
+
+              <!-- Inicio Input Repetir Contraseña -->
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="material-symbols-outlined"> key </i>
+                </span>
+                <div class="form-floating">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="rep-passwd-floating-input"
+                    placeholder="Repetir contraseña"
+                    required
+                  />
+                  <label for="rep-passwd-floating-input"
+                    >Repetir contraseña</label
+                  >
+                </div>
+                <button
+                  id="rep-passwd-btn"
+                  class="btn btn-outline-secondary eye-btn"
+                  type="button"
+                  tabindex="-1"
+                >
+                  <i class="material-symbols-outlined"> visibility_off </i>
+                </button>
+              </div>
+              <!-- Fin Input Repetir Contraseña -->
+
+              <!-- Inicio Boton Enviar -->
+              <button
+                class="col-12 main-btn btn btn-primary w-100"
+                type="submit"
+              >
+                Registrarme
+              </button>
+              <!-- Fin Boton Enviar -->
+            </form>
+            <!-- Fin Formulario de Registro -->
+            <!-- Inicio Sugerencia registrar -->
+            <div class="d-flex justify-content-center">
+              <span style="font-size: smaller">
+                <span>¿Ya tienes una cuenta?</span>
+                <a class="link" href="./login.html">Inicia sesión</a>
+              </span>
             </div>
-            <!-- Fin Login por redes sociales -->
-
-            <!-- Inicio Separador -->
-            <div class="row">
-              <span class="separator">O</span>
-            </div>
-            <!-- Fin Separador -->
-
-            <!-- Inicio Formulario de Login -->
-            <div class="row">
-              <form action="#" method="post">
-                <!-- Inicio Input Correo -->
-                <div class="input-group mb-3">
-                  <span class="input-group-text">
-                    <img src="../img/email.svg" alt="email" />
-                  </span>
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="floatingInputGroup"
-                      placeholder="Correo"
-                    />
-                    <label for="floatingInputGroup">Correo</label>
-                  </div>
-                </div>
-                <!-- Fin Input Correo -->
-                
-                <!-- Inicio Input Nombre -->
-                <div class="input-group mb-3">
-                    <span class="input-group-text">
-                      <img src="../img/user-circle.svg" alt="user" />
-                    </span>
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="floatingInputGroup"
-                        placeholder="Nombre"
-                      />
-                      <label for="floatingInputGroup">Nombre</label>
-                    </div>
-                  </div>
-                  <!-- Fin Input Nombre -->
-
-                <!-- Inicio Input Contraseña -->
-                <div class="input-group mb-3">
-                  <span class="input-group-text">
-                    <img src="../img/key.svg" alt="key" />
-                  </span>
-                  <div class="form-floating">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="floatingPassword"
-                      placeholder="Contraseña"
-                    />
-                    <label for="floatingPassword">Contraseña</label>
-                  </div>
-                  <!-- TODO: Agregar animación en la imagen del ojo (abierto/cerrado) -->
-                  <button class="btn btn-outline-secondary" type="button">
-                    <img src="../img/eye.svg" alt="" />
-                  </button>
-                </div>
-                <!-- Fin Input Contraseña -->
-                
-                <!-- Inicio Input Repetir Contraseña -->
-                <div class="input-group mb-3">
-                    <span class="input-group-text">
-                      <img src="../img/key.svg" alt="key" />
-                    </span>
-                    <div class="form-floating">
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="floatingRepPassword"
-                        placeholder="Repetir contraseña"
-                      />
-                      <label for="floatingRepPassword">Repetir contraseña</label>
-                    </div>
-                    <!-- TODO: Agregar animación en la imagen del ojo (abierto/cerrado) -->
-                    <button class="btn btn-outline-secondary" type="button">
-                      <img src="../img/eye.svg" alt="" />
-                    </button>
-                  </div>
-                  <!-- Fin Input Repetir Contraseña -->
-
-                <!-- Inicio Boton Enviar -->
-                <!-- TODO: Agregar :hover y :active -->
-                <div class="col-12">
-                  <button class="bt-login btn btn-primary w-100" type="submit">
-                    Registrarme
-                  </button>
-                </div>
-
-                <!-- Fin Boton Enviar -->
-
-                <!-- Inicio Sugerencia registrar -->
-                <div class="d-flex justify-content-center">
-                  <span style="font-size: smaller">
-                    <span>¿Ya tienes una cuenta?</span>
-                    <a class="link" href="#">Inicia sesión</a>
-                  </span>
-                </div>
-                <!-- Fin Sugerencia registrar -->
-              </form>
-            </div>
-            <!-- Fin Formulario de Login -->
-          </div>
+            <!-- Fin Sugerencia registrar -->
+          </main>
           <!-- Fin Panel Login -->
         </div>
       </div>
@@ -211,10 +182,31 @@
     </div>
     <!-- Fin Contenedor -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Inicio Toast Register -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div
+        id="myToast"
+        class="toast align-items-center"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div id="toast-message" class="toast-body">
+            This is a toast message.
+          </div>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Toast Register -->
+
+    <!-- Boostrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
