@@ -1,4 +1,3 @@
-//* Redireccionar a página principal tras registro exitoso
 //* Agregar funcionalidad al checkbox (Recuérdame)
 //* Agregar funcionalidad al link (Olvidó su contraseña)
 import { auth, db } from "./firebase.js";
@@ -13,6 +12,8 @@ import {
   setDoc,
   getDoc,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+
+const redirectPage = "../html/busqueda.html";
 
 const loginForm = document.querySelector("#login-form");
 const passwdBtn = document.querySelector("#passwd-btn");
@@ -33,13 +34,21 @@ loginForm.addEventListener("submit", async (e) => {
     const docRef = doc(db, "usuario", userCredentials.user.uid);
     const docSnap = await getDoc(docRef);
     showToast(`Bienvenido ${docSnap.data().nombre}`);
+    // Se redirige a otra página
+    setTimeout(() => {
+      window.location.href = redirectPage;
+    }, "1500");
   } catch (error) {
-    if (error.code === "auth/user-not-found") {
-      showToast("Correo no encontrado");
-    } else if (error.code === "auth/wrong-password") {
-      showToast("Contraseña incorrecta");
-    } else if (error.code) {
-      showToast("Algo salió mal");
+    switch (error.code) {
+      case "auth/user-not-found":
+        showToast("Usuario no encontrado");
+        break;
+      case "auth/wrong-password":
+        showToast("Contraseña incorrecta");
+        break;
+      default:
+        showToast("Algo salió mal");
+        break;
     }
   }
 });
@@ -52,18 +61,28 @@ googleBtn.addEventListener("click", async () => {
       nombre: userCredentials.user.displayName,
     });
     showToast(`Bienvenido ${userCredentials.user.displayName}`);
+    // Se redirige a otra página
+    setTimeout(() => {
+      window.location.href = redirectPage;
+    }, "1500");
   } catch (error) {
-    if (error.code === "auth/popup-closed-by-user") {
-      showToast("Operación cancelada");
-    } else if (error.code === "auth/account-exists-with-different-credential") {
-      showToast("Ya existe una cuenta con este correo");
-    } else if (error.code === "auth/cancelled-popup-request") {
-      showToast("El navegador impidió abrir un Pop-Up");
-    } else if (error.code === "auth/unauthorized-domain") {
-      showToast("Dominio no autorizado");
-      console.log("Utilizar localhost en lugar de 127.0.0.1");
-    } else if (error.code) {
-      showToast("Algo salió mal");
+    switch (error.code) {
+      case "auth/popup-closed-by-user":
+        showToast("Operación cancelada");
+        break;
+      case "auth/account-exists-with-different-credential":
+        showToast("Ya existe una cuenta con este correo");
+        break;
+      case "auth/cancelled-popup-request":
+        showToast("El navegador impidió abrir un Pop-Up");
+        break;
+      case "auth/unauthorized-domain":
+        showToast("Dominio no autorizado");
+        console.log("Utilizar localhost en lugar de 127.0.0.1");
+        break;
+      default:
+        showToast("Algo salió mal");
+        break;
     }
   }
 });
