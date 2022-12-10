@@ -13,6 +13,7 @@ var userUID;
 var unsuscribe;
 const contenedorContactos = document.getElementById("contactos");
 const contenedorMensajes = document.getElementById("bodyContent");
+const contactoSeleccionado = document.getElementById("selected-contact");
 
 window.addEventListener("load", async () => {
   onAuthStateChanged(auth, async (user) => {
@@ -49,8 +50,19 @@ async function getContactos(userId) {
  * Obtiene los mensajes de la base de datos y luego los muestra en la pantalla.
  * @param {String} idChat - la identificación del chat
  */
-async function getMensajes(idChat) {
+async function getMensajes(idChat, nombreChat, urlFoto) {
   try {
+    const activeChatDiv = `
+      <div class="avatar">
+        <img src="${
+          urlFoto === "default" ? "../img/user-circle.svg" : urlFoto
+        }" alt="perfil">
+      </div>
+      <div class="info-user-selected">
+        <span class="name-user">${nombreChat}</span>
+      </div>
+    `;
+    contactoSeleccionado.innerHTML = activeChatDiv;
     unsuscribe = onSnapshot(
       collection(db, `chat/${idChat}/mensajes`),
       (snapshot) => {
@@ -98,7 +110,7 @@ async function createHTMLContacto(idContacto, idChat) {
     contenedorContactos.innerHTML += contactDiv;
     // Se agrega un listener onclick para cada contacto
     document.getElementById(idChat).onclick = async () => {
-      await getMensajes(idChat);
+      await getMensajes(idChat, nombre, urlFoto);
     };
   } catch (error) {
     console.log(error.message);
