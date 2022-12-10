@@ -75,10 +75,6 @@ async function getMensajes(idChat, nombreChat, urlFoto) {
         console.log(error.message);
       }
     );
-    // const mensajes = await getDocs(collection(db, `chat/${idChat}/mensajes`));
-    // mensajes.forEach(async (msg) => {
-    //   showMensaje(msg.data().mensaje, msg.data().creado_por == userUID);
-    // });
   } catch (error) {
     console.log(error.message);
   }
@@ -108,10 +104,18 @@ async function createHTMLContacto(idContacto, idChat) {
         </div>
     `;
     contenedorContactos.innerHTML += contactDiv;
+
     // Se agrega un listener onclick para cada contacto
-    document.getElementById(idChat).onclick = async () => {
-      await getMensajes(idChat, nombre, urlFoto);
-    };
+    const listaContactos = document.querySelectorAll(".user");
+    listaContactos.forEach((item) => {
+      item.addEventListener("click", async function () {
+        await getMensajes(
+          item.id,
+          item.querySelector("span").innerText,
+          item.querySelector("img").src
+        );
+      });
+    });
   } catch (error) {
     console.log(error.message);
   }
