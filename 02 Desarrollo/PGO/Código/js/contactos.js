@@ -11,9 +11,12 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.14.0/fi
 
 var userUID;
 var unsuscribe;
+var activeChat = "";
 const contenedorContactos = document.getElementById("contactos");
 const contenedorMensajes = document.getElementById("bodyContent");
 const contactoSeleccionado = document.getElementById("selected-contact");
+const botonEnviar = document.getElementById("submit");
+const mensajeTextArea = document.getElementById("message");
 
 window.addEventListener("load", async () => {
   onAuthStateChanged(auth, async (user) => {
@@ -25,6 +28,14 @@ window.addEventListener("load", async () => {
       // User not logged in or has just logged out.
       console.log("El usuario no ha iniciado sesión");
     }
+  });
+});
+
+botonEnviar.addEventListener("click", async () => {
+  const tiempo = new Date();
+  await setDoc(doc(db, `chat/${activeChat}/mensajes`, tiempo.toISOString()), {
+    mensaje: mensajeTextArea.value,
+    creado_por: userUID
   });
 });
 
@@ -109,6 +120,7 @@ async function createHTMLContacto(idContacto, idChat) {
     const listaContactos = document.querySelectorAll(".user");
     listaContactos.forEach((item) => {
       item.addEventListener("click", async function () {
+        activeChat = item.id;
         await getMensajes(
           item.id,
           item.querySelector("span").innerText,
@@ -150,16 +162,3 @@ function showMensaje(mensaje, tipo) {
     contenedorMensajes.innerHTML += boxDiv;
   }
 }
-
-//  async function sendMensaje(idChat, mensaje) {
-
-//     const docRef = doc(db, "chat", idChat);
-//     const docSnap = await getDoc(docRef);
-//     const mensajes = docSnap.data().mensajes;
-//     mensajes.push(mensaje);
-
-//     await updateDoc(docRef, {
-//         mensajes: mensajes
-//     });
-
-// }
