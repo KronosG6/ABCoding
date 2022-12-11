@@ -110,7 +110,7 @@ body {
 
 .section-search .input-search i {
     position: absolute;
-    left: 115px;
+    left: 15px;
     color: #ccc;
 }
 
@@ -118,7 +118,7 @@ body {
 .section-users{
     display: block;
     /*flex-direction: column;*/
-    height: calc(275px - 100px);
+    height: calc(520px - 100px);
     width: 100%;
   /*  padding-right: 0px;*/
     overflow-y: auto;
