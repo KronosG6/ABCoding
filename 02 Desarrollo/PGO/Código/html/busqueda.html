@@ -1,327 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/02 Desarrollo/PGO/Código/css/busqueda.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/02 Desarrollo/PGO/Código/css/busqueda.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>ProfeGO - Búqueda</title>
-</head>
-<body>
+
+    <!-- Importa el módulo busqueda.js -->
+    <script type="module" src="../js/busqueda.js"></script>
+  </head>
+  <body>
     <header>
-        <a href = "../index.html">
-            <img src="../img/logo.svg" alt="logo">
+      <a href="../index.html">
+        <img src="../img/logo.svg" alt="logo" />
+      </a>
+      <div class="buscar">
+        <input type="text" placeholder="Buscar" required />
+      </div>
+      <div class="navbar-right">
+        <div class="tu-cuenta">Tu cuenta</div>
+        <a href="./contactos.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            style="fill: #4c40f7"
+          >
+            <path
+              d="M5 18v3.766l1.515-.909L11.277 18H16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h1zM4 8h12v8h-5.277L7 18.234V16H4V8z"
+            ></path>
+            <path
+              d="M20 2H8c-1.103 0-2 .897-2 2h12c1.103 0 2 .897 2 2v8c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2z"
+            ></path>
+          </svg>
         </a>
-        <div class="buscar">
-            <input type="text" placeholder="Buscar" required>
-        </div>
-        <div class="navbar-right">
-            <div class="tu-cuenta">Tu cuenta</div>
-            <a href = "./contactos.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: #4C40F7;"><path d="M5 18v3.766l1.515-.909L11.277 18H16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h1zM4 8h12v8h-5.277L7 18.234V16H4V8z"></path><path d="M20 2H8c-1.103 0-2 .897-2 2h12c1.103 0 2 .897 2 2v8c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2z"></path></svg>
-            </a>
-            <a href = "./profesorPage.html">
-                <div class="dar-clases">Soy profesor</div>
-            </a>
-        </div>
+        <a href="./profesorPage.html">
+          <div class="dar-clases">Soy profesor</div>
+        </a>
+      </div>
     </header>
     <div class="content">
-        <div class="buscador">
-            <div class="boton-guardar">
-                <img src="/02 Desarrollo/PGO/Código/img/bookmark.svg" alt="Marcador">
-                Guardar búsqueda
-            </div>
-            <div class="content-buscar">
-                <div class="titulo-buscar">
-                    Buscador de profesores
-                </div>
-                <div class="rellenar">
-                    <p>¿Qué quieres aprender?</p>
-                    <input type="text" placeholder="Ej: Matemática, Programación" required>
-                    <p>¿Dónde?</p>
-                    <input type="text" placeholder="Ej: Lima, Trujillo, Arequipa" required>
-                </div>
-                <div class="checkbox">
-                    <p>Lugar de la clase</p>
-                    <input name="opcion1" type="checkbox"/>Puedo desplazarme
-                    <br>
-                    <input name="opcion2" type="checkbox"/>Clases a domicilio
-                    <br>
-                    <input name="opcion3" type="checkbox"/>Clases en Línea
-                    <br>
-                </div>
-            </div>
+      <div class="buscador">
+        <div class="boton-guardar">
+          <img
+            src="/02 Desarrollo/PGO/Código/img/bookmark.svg"
+            alt="Marcador"
+          />
+          Guardar búsqueda
         </div>
-        <div class="catalago">
-            <div class="encabezado">
-                <h1>Todos los profesores</h1>
-            </div>
-            <div class="box">
-                <div class="img">
-                    <img src="/02 Desarrollo/PGO/Código/img/cata1.jpeg" alt="">
-                </div>
-                <div class="colum1">
-                    <h2>George Tarleton</h2>
-                    <p>San Miguel</p>
-                    <p>Armado de cubos de rubik</p>
-                    <p>Lorem ipsum dolor, debitis explicabo, consequatur fugiat sit cupiditate quam sapiente ipsum aspernatur perspiciatis hic et fuga non adipisci magnam!</p>
-                </div>
-                <div class="colum2">
-                    <h2>S/10 /h</h2>
-                    <p>prueba 20 min. gratis</p>
-                    <div class="estrellas">
-                        <input type="radio" id="star1" name="rate" value="star1">
-                        <label for="star1"></label>
-                        <input type="radio" id="star2" name="rate" value="star2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star3" name="rate" value="star3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star4" name="rate" value="star4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star5" name="rate" value="star5">
-                        <label for="star5"></label>
-                    </div>
-                    <div class="boton-contactar">
-                        Contactar
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img">
-                    <img src="/02 Desarrollo/PGO/Código/img/cata2.jpg" alt="">
-                </div>
-                <div class="colum1">
-                    <h2>Rorro Pirrorro</h2>
-                    <p>San Miguel</p>
-                    <p>Armado de cubos de rubik</p>
-                    <p>Lorem ipsum dolor, debitis explicabo, consequatur fugiat sit cupiditate quam sapiente ipsum aspernatur perspiciatis hic et fuga non adipisci magnam!</p>
-                </div>
-                <div class="colum2">
-                    <h2>S/10 /h</h2>
-                    <p>prueba 20 min. gratis</p>
-                    <div class="estrellas">
-                        <input type="radio" id="star1" name="rate" value="star1">
-                        <label for="star1"></label>
-                        <input type="radio" id="star2" name="rate" value="star2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star3" name="rate" value="star3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star4" name="rate" value="star4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star5" name="rate" value="star5">
-                        <label for="star5"></label>
-                    </div>
-                    <div class="boton-contactar">
-                        Contactar
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img">
-                    <img src="/02 Desarrollo/PGO/Código/img/cata1.jpeg" alt="">
-                </div>
-                <div class="colum1">
-                    <h2>George Tarleton</h2>
-                    <p>San Miguel</p>
-                    <p>Armado de cubos de rubik</p>
-                    <p>Lorem ipsum dolor, debitis explicabo, consequatur fugiat sit cupiditate quam sapiente ipsum aspernatur perspiciatis hic et fuga non adipisci magnam!</p>
-                </div>
-                <div class="colum2">
-                    <h2>S/10 /h</h2>
-                    <p>prueba 20 min. gratis</p>
-                    <div class="estrellas">
-                        <input type="radio" id="star1" name="rate" value="star1">
-                        <label for="star1"></label>
-                        <input type="radio" id="star2" name="rate" value="star2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star3" name="rate" value="star3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star4" name="rate" value="star4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star5" name="rate" value="star5">
-                        <label for="star5"></label>
-                    </div>
-                    <div class="boton-contactar">
-                        Contactar
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img">
-                    <img src="/02 Desarrollo/PGO/Código/img/cata2.jpg" alt="">
-                </div>
-                <div class="colum1">
-                    <h2>Rorro Pirrorro</h2>
-                    <p>San Miguel</p>
-                    <p>Armado de cubos de rubik</p>
-                    <p>Lorem ipsum dolor, debitis explicabo, consequatur fugiat sit cupiditate quam sapiente ipsum aspernatur perspiciatis hic et fuga non adipisci magnam!</p>
-                </div>
-                <div class="colum2">
-                    <h2>S/10 /h</h2>
-                    <p>prueba 20 min. gratis</p>
-                    <div class="estrellas">
-                        <input type="radio" id="star1" name="rate" value="star1">
-                        <label for="star1"></label>
-                        <input type="radio" id="star2" name="rate" value="star2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star3" name="rate" value="star3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star4" name="rate" value="star4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star5" name="rate" value="star5">
-                        <label for="star5"></label>
-                    </div>
-                    <div class="boton-contactar">
-                        Contactar
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img">
-                    <img src="/02 Desarrollo/PGO/Código/img/cata1.jpeg" alt="">
-                </div>
-                <div class="colum1">
-                    <h2>George Tarleton</h2>
-                    <p>San Miguel</p>
-                    <p>Armado de cubos de rubik</p>
-                    <p>Lorem ipsum dolor, debitis explicabo, consequatur fugiat sit cupiditate quam sapiente ipsum aspernatur perspiciatis hic et fuga non adipisci magnam!</p>
-                </div>
-                <div class="colum2">
-                    <h2>S/10 /h</h2>
-                    <p>prueba 20 min. gratis</p>
-                    <div class="estrellas">
-                        <input type="radio" id="star1" name="rate" value="star1">
-                        <label for="star1"></label>
-                        <input type="radio" id="star2" name="rate" value="star2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star3" name="rate" value="star3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star4" name="rate" value="star4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star5" name="rate" value="star5">
-                        <label for="star5"></label>
-                    </div>
-                    <div class="boton-contactar">
-                        Contactar
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img">
-                    <img src="/02 Desarrollo/PGO/Código/img/cata2.jpg" alt="">
-                </div>
-                <div class="colum1">
-                    <h2>Rorro Pirrorro</h2>
-                    <p>San Miguel</p>
-                    <p>Armado de cubos de rubik</p>
-                    <p>Lorem ipsum dolor, debitis explicabo, consequatur fugiat sit cupiditate quam sapiente ipsum aspernatur perspiciatis hic et fuga non adipisci magnam!</p>
-                </div>
-                <div class="colum2">
-                    <h2>S/10 /h</h2>
-                    <p>prueba 20 min. gratis</p>
-                    <div class="estrellas">
-                        <input type="radio" id="star1" name="rate" value="star1">
-                        <label for="star1"></label>
-                        <input type="radio" id="star2" name="rate" value="star2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star3" name="rate" value="star3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star4" name="rate" value="star4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star5" name="rate" value="star5">
-                        <label for="star5"></label>
-                    </div>
-                    <div class="boton-contactar">
-                        Contactar
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img">
-                    <img src="/02 Desarrollo/PGO/Código/img/cata1.jpeg" alt="">
-                </div>
-                <div class="colum1">
-                    <h2>George Tarleton</h2>
-                    <p>San Miguel</p>
-                    <p>Armado de cubos de rubik</p>
-                    <p>Lorem ipsum dolor, debitis explicabo, consequatur fugiat sit cupiditate quam sapiente ipsum aspernatur perspiciatis hic et fuga non adipisci magnam!</p>
-                </div>
-                <div class="colum2">
-                    <h2>S/10 /h</h2>
-                    <p>prueba 20 min. gratis</p>
-                    <div class="estrellas">
-                        <input type="radio" id="star1" name="rate" value="star1">
-                        <label for="star1"></label>
-                        <input type="radio" id="star2" name="rate" value="star2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star3" name="rate" value="star3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star4" name="rate" value="star4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star5" name="rate" value="star5">
-                        <label for="star5"></label>
-                    </div>
-                    <div class="boton-contactar">
-                        Contactar
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img">
-                    <img src="/02 Desarrollo/PGO/Código/img/cata2.jpg" alt="">
-                </div>
-                <div class="colum1">
-                    <h2>Rorro Pirrorro</h2>
-                    <p>San Miguel</p>
-                    <p>Armado de cubos de rubik</p>
-                    <p>Lorem ipsum dolor, debitis explicabo, consequatur fugiat sit cupiditate quam sapiente ipsum aspernatur perspiciatis hic et fuga non adipisci magnam!</p>
-                </div>
-                <div class="colum2">
-                    <h2>S/10 /h</h2>
-                    <p>prueba 20 min. gratis</p>
-                    <div class="estrellas">
-                        <input type="radio" id="star1" name="rate" value="star1">
-                        <label for="star1"></label>
-                        <input type="radio" id="star2" name="rate" value="star2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star3" name="rate" value="star3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star4" name="rate" value="star4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star5" name="rate" value="star5">
-                        <label for="star5"></label>
-                    </div>
-                    <div class="boton-contactar">
-                        Contactar
-                    </div>
-                </div>
-            </div>
-        </div>    
+        <div class="content-buscar">
+          <div class="titulo-buscar">Buscador de profesores</div>
+          <div class="rellenar">
+            <p>¿Qué quieres aprender?</p>
+            <input
+              type="text"
+              placeholder="Ej: Matemática, Programación"
+              required
+            />
+            <p>¿Dónde?</p>
+            <input
+              type="text"
+              placeholder="Ej: Lima, Trujillo, Arequipa"
+              required
+            />
+          </div>
+          <div class="checkbox">
+            <p>Modalidad</p>
+            <input name="opcion1" type="checkbox" />Virtual
+            <br />
+            <input name="opcion2" type="checkbox" />Presencial
+            <br />
+          </div>
+        </div>
+      </div>
+      <div id="contenedorCatalogo" class="catalogo">
+        <div class="encabezado">
+          <h1>Todos los profesores</h1>
+        </div>
+        <!-- Lista de Profesores -->
+      </div>
     </div>
 
     <footer>
-        <div class="content-footer">
-            <div class="content-foo">
-                <h5>Términos y condiciones</h5>
-                <p>Política de privacidad</p>
-                <p>Condiciones de uso Profesores</p>
-                <p>Condiciones de uso Alumnos</p>
-            </div>
-            <div class="content-foo">
-                <h5>Descubre más</h5>
-                <p>Ayuda</p>
-                <p>Cómo funciona</p>
-                <p>Acceso profesores</p>
-                <p>Misión y visión</p>
-            </div>
-            <div class="content-foo">
-                <h5>Contáctanos</h5>
-                <p>UNMSM</p>
-                <p>abcoding@gmail.com</p>
-                <p>+51 955 649 849</p>
-            </div>
+      <div class="content-footer">
+        <div class="content-foo">
+          <h5>Términos y condiciones</h5>
+          <p>Política de privacidad</p>
+          <p>Condiciones de uso Profesores</p>
+          <p>Condiciones de uso Alumnos</p>
         </div>
+        <div class="content-foo">
+          <h5>Descubre más</h5>
+          <p>Ayuda</p>
+          <p>Cómo funciona</p>
+          <p>Acceso profesores</p>
+          <p>Misión y visión</p>
+        </div>
+        <div class="content-foo">
+          <h5>Contáctanos</h5>
+          <p>UNMSM</p>
+          <p>abcoding@gmail.com</p>
+          <p>+51 955 649 849</p>
+        </div>
+      </div>
     </footer>
-</body>
-</html> 
+  </body>
+</html>
