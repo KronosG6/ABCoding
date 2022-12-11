@@ -1,7 +1,7 @@
 import { auth, db } from "./firebase.js";
 import {
   doc,
-  setDoc,
+  updateDoc,
   getDoc,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
@@ -30,6 +30,7 @@ formRegistro.addEventListener("submit", async (e) => {
 
   const tipoClase = formRegistro["tipo-clase"].value;
   const materia = formRegistro["materiaInput"].value;
+  const promocion = formRegistro["promocionInput"].value;
   const precio = formRegistro["precioInput"].value;
   const descripcion = formRegistro["descripcionInput"].value;
   const nombre = formRegistro["nombreInput"].value;
@@ -37,14 +38,17 @@ formRegistro.addEventListener("submit", async (e) => {
   const localidad = formRegistro["localidadInput"].value;
 
   try {
-    await setDoc(doc(db, "usuario", userUID), {
+    await updateDoc(doc(db, "usuario", userUID), {
       nombre,
       descripcion,
       telefono,
       tipoClase,
       materia,
+      promocion,
       precio,
       localidad,
+      tipo: "profesor",
+      puntuacion: 4,
     });
     // Se redirige a otra página
     setTimeout(() => {
@@ -62,7 +66,6 @@ async function showDatosUsuario() {
   }
   const docRef = doc(db, "usuario", userUID);
   const docSnap = await getDoc(docRef);
-  // showToast(`Bienvenido ${docSnap.data().nombre}`);
   if (docSnap.data().nombre) {
     formRegistro["nombreInput"].value = docSnap.data().nombre;
   } else {
@@ -78,6 +81,11 @@ async function showDatosUsuario() {
     formRegistro["materiaInput"].value = docSnap.data().materia;
   } else {
     formRegistro["materiaInput"].value = "";
+  }
+  if (docSnap.data().promocion) {
+    formRegistro["promocionInput"].value = docSnap.data().promocion;
+  } else {
+    formRegistro["promocionInput"].value = "";
   }
   if (docSnap.data().precio) {
     formRegistro["precioInput"].value = docSnap.data().precio;
