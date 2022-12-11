@@ -24,6 +24,7 @@ window.addEventListener("load", async () => {
       // User logged in already or has just logged in.
       userUID = user.uid;
       await getContactos(user.uid);
+      mensajeTextArea.value = "";
     } else {
       // User not logged in or has just logged out.
       console.log("El usuario no ha iniciado sesión");
@@ -32,12 +33,22 @@ window.addEventListener("load", async () => {
 });
 
 botonEnviar.addEventListener("click", async () => {
-  const tiempo = new Date();
-  await setDoc(doc(db, `chat/${activeChat}/mensajes`, tiempo.toISOString()), {
-    mensaje: mensajeTextArea.value,
-    creado_por: userUID
-  });
-  mensajeTextArea.value = "";
+  const mensaje = mensajeTextArea.value;
+  if (mensaje != "") {
+    mensajeTextArea.value = "";
+    const tiempo = new Date();
+    await setDoc(doc(db, `chat/${activeChat}/mensajes`, tiempo.toISOString()), {
+      mensaje,
+      creado_por: userUID,
+    });
+  }
+});
+
+mensajeTextArea.addEventListener("keyup", (event) => {
+  event.target.value = event.target.value.replace(/[\r\n\v]+/g, "");
+  if (event.key == "Enter") {
+    botonEnviar.click();
+  }
 });
 
 /**
@@ -82,6 +93,7 @@ async function getMensajes(idChat, nombreChat, urlFoto) {
         snapshot.docs.forEach(async (msg) => {
           showMensaje(msg.data().mensaje, msg.data().creado_por == userUID);
         });
+        contenedorMensajes.scrollTop = contenedorMensajes.scrollHeight;
       },
       (error) => {
         console.log(error.message);
@@ -122,6 +134,7 @@ async function createHTMLContacto(idContacto, idChat) {
     listaContactos.forEach((item) => {
       item.addEventListener("click", async function () {
         activeChat = item.id;
+        mensajeTextArea.value = "";
         await getMensajes(
           item.id,
           item.querySelector("span").innerText,
