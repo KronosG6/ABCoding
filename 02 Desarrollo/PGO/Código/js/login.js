@@ -59,6 +59,8 @@ googleBtn.addEventListener("click", async () => {
     const userCredentials = await signInWithPopup(auth, googleProvider);
     await setDoc(doc(db, "usuario", userCredentials.user.uid), {
       nombre: userCredentials.user.displayName,
+      url_foto: userCredentials.user.photoURL,
+      tipo: "estudiante",
     });
     showToast(`Bienvenido ${userCredentials.user.displayName}`);
     // Se redirige a otra página
@@ -87,14 +89,17 @@ googleBtn.addEventListener("click", async () => {
   }
 });
 
-passwdBtn.addEventListener("mousedown", () => {
-  passwdInput.type = "text";
-  passwdBtn.firstElementChild.innerText = "visibility";
-});
-
-passwdBtn.addEventListener("mouseup", () => {
-  passwdInput.type = "password";
-  passwdBtn.firstElementChild.innerText = "visibility_off";
+passwdBtn.addEventListener("click", () => {
+  switch (passwdInput.type) {
+    case "password":
+      passwdInput.type = "text";
+      passwdBtn.firstElementChild.innerText = "visibility";
+      break;
+    case "text":
+      passwdInput.type = "password";
+      passwdBtn.firstElementChild.innerText = "visibility_off";
+      break;
+  }
 });
 
 onAuthStateChanged(auth, async (user) => {

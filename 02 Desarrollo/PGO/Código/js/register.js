@@ -39,6 +39,8 @@ registerForm.addEventListener("submit", async (e) => {
     );
     await setDoc(doc(db, "usuario", userCredentials.user.uid), {
       nombre: name,
+      url_foto: "default",
+      tipo: "estudiante",
     });
     showToast(`Bienvenido ${name}`);
     // Se redirige a otra página
@@ -72,6 +74,8 @@ googleBtn.addEventListener("click", async () => {
     const userCredentials = await signInWithPopup(auth, googleProvider);
     await setDoc(doc(db, "usuario", userCredentials.user.uid), {
       nombre: userCredentials.user.displayName,
+      url_foto: userCredentials.user.photoURL,
+      tipo: "estudiante",
     });
     showToast(`Bienvenido ${userCredentials.user.displayName}`);
     // Se redirige a otra página
@@ -100,24 +104,30 @@ googleBtn.addEventListener("click", async () => {
   }
 });
 
-passwdBtn.addEventListener("mousedown", () => {
-  passwdInput.type = "text";
-  passwdBtn.firstElementChild.innerText = "visibility";
+passwdBtn.addEventListener("click", () => {
+  switch (passwdInput.type) {
+    case "password":
+      passwdInput.type = "text";
+      passwdBtn.firstElementChild.innerText = "visibility";
+      break;
+    case "text":
+      passwdInput.type = "password";
+      passwdBtn.firstElementChild.innerText = "visibility_off";
+      break;
+  }
 });
 
-passwdBtn.addEventListener("mouseup", () => {
-  passwdInput.type = "password";
-  passwdBtn.firstElementChild.innerText = "visibility_off";
-});
-
-repPasswdBtn.addEventListener("mousedown", () => {
-  repPasswdInput.type = "text";
-  repPasswdBtn.firstElementChild.innerText = "visibility";
-});
-
-repPasswdBtn.addEventListener("mouseup", () => {
-  repPasswdInput.type = "password";
-  repPasswdBtn.firstElementChild.innerText = "visibility_off";
+repPasswdBtn.addEventListener("click", () => {
+  switch (repPasswdInput.type) {
+    case "password":
+      repPasswdInput.type = "text";
+      repPasswdBtn.firstElementChild.innerText = "visibility";
+      break;
+    case "text":
+      repPasswdInput.type = "password";
+      repPasswdBtn.firstElementChild.innerText = "visibility_off";
+      break;
+  }
 });
 
 function showToast(message) {
