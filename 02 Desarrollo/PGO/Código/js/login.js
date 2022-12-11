@@ -59,6 +59,8 @@ googleBtn.addEventListener("click", async () => {
     const userCredentials = await signInWithPopup(auth, googleProvider);
     await setDoc(doc(db, "usuario", userCredentials.user.uid), {
       nombre: userCredentials.user.displayName,
+      url_foto: userCredentials.user.photoURL,
+      tipo: "estudiante",
     });
     showToast(`Bienvenido ${userCredentials.user.displayName}`);
     // Se redirige a otra página
