@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    height: 60px;
+    border-bottom: 1px solid #6B6B6B;
+}
+
+#header-left {
+    width: 550px;
+    padding-left: 50px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#header-logo {
+    width: 102px;
+    height: 48px;
+}
+
+.searchbar-input {
+    border: none;
+    background-color: #f8f8f8;
+    color: #6B6B6B;
+    width: 275px;
+    height: 30px;
+}
+
+.searchbar-submit {
+    border: none;
+    background-color: #f8f8f8;
+    width: 30px;
+    height: 30px;
+}
+
+.searchbar-submit:hover {
+    background-color: #4C40F7;
+    cursor: pointer;
+}
+
+.searchbar-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar {
+    border: 1px solid #4C40F7;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#header-right {
+    width: 550px;
+    padding-left: 230px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 50px;
+}
+
+#header-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+#header-profile h4 {
+    color: #6B6B6B;
+}
+
+#header-profile h4:hover {
+    color: #4C40F7;
+}
+
+.register-button {
+    border: 1px solid #4C40F7;
+    background-color: #f8f8f8;
+    color: #4C40F7;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #4C40F7;
+    color: #f8f8f8;
+}
+
+#register-section {
+    height: 450px;
+}
+
+.introduction {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #4C40F7;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 350px;
+    z-index: 2;
+}
+
+.introduction h2 {
+    color: #111029;
+}
+
+.introduction p {
+    font-size: 15px;
+    color: #6B6B6B;
+}
+
+.introduction button {
+    border: 1px solid #4C40F7;
+    background-color: #4C40F7;
+    color: #f8f8f8;
+}
+
+.introduction button:hover {
+    background-color: #f8f8f8;
+    color: #4C40F7;
+}
+
+#register-section img {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    top: -300px;
+    left: 300px;
+    z-index: 1;
+}
+
+#tutorial-section {
+    box-sizing: border-box;
+    height: 450px;
+    padding: 50px;
+    text-align: center;
+}
+
+#tutorial-section h2 {
+    color: #111029;
+}
+
+#group-tutorial-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.tutorial-card h3, h4 {
+    color: #4C40F7;
+}
+
+#reasons-section {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 50px;
+}
+
+#reasons-section h2 {
+    color: #111029;
+}
+
+#group-reasons-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 50px;
+}
+
+.reasons-card {
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.reasons-card h4 {
+    color: #111029;
+}
+
+.reasons-card p {
+    color: #6B6B6B;
+}
+
+.reasons-card img {
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+
+footer {
+    background-color: #00113B;
+    padding: 50px;
+}
+
+#group-footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+#group-footer-links a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+#group-footer-links a:hover {
+    color: #4C40F7;
+}
+
+#group-footer-links h4 {
+    color: #f8f8f8;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
