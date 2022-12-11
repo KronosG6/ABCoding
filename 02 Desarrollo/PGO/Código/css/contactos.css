@@ -430,3 +430,51 @@ textarea::placeholder {
 }
 
 
+
+/*  parte de la portada de la pantalla contactos*/
+
+.chat-front-page {
+    flex-grow: 1;
+    flex-basis: 0;
+    background: #4C40F7;
+}
+
+.box-front-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.image-text-front {
+    width: 100%;
+    height: 55%;
+}
+
+.chat-front-page .box-front-page .image-text-front .image-front {
+    width: 100%;
+    height: 60%;
+}
+
+.chat-front-page .box-front-page .image-text-front .image-front img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.text-front h1 {
+    font-size: 1.9em;
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+}
+
+.text2-front p {
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+}
