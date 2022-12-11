@@ -37,6 +37,7 @@ botonEnviar.addEventListener("click", async () => {
     mensaje: mensajeTextArea.value,
     creado_por: userUID
   });
+  mensajeTextArea.value = "";
 });
 
 /**
@@ -126,6 +127,8 @@ async function createHTMLContacto(idContacto, idChat) {
           item.querySelector("span").innerText,
           item.querySelector("img").src
         );
+        document.getElementById("portada-contacto").style.display = "none";
+        document.getElementById("box-chat").style.display = "block";
       });
     });
   } catch (error) {
