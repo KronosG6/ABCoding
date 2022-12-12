@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>perfil</title>
-        <link href="../css/perfil.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <a href = "../index.html">
-                <img src="../img/ProfeGO.png">
-            </a>
-            <h2 class="title-perfil"> Mi perfil</h2>
-            <a href="../index.html" class="nav-perfil btn-ingresa">
-                <h4>Soy estudiante</h4>
-            </a>
-        </header>
-        <div class="contenido-perfil">
-            <h4>Modifica tus datos:</h4>
-            <hr><br>
-            <div>
-                <form>
-                    <div class="box-dates">
-                        <label style="padding-right: 50px; ">Nombre: </label> <input type="text" style="border-radius: 5px; padding: 5px;" placeholder="Tu nombre" required><br>
-                         <br>
-                        <label style="padding-right: 46px; ">Teléfono: </label> <input type="text" style="border-radius: 5px;  padding: 5px;" placeholder="Tu telefono" required><br>
-                        <br>
-                        <label style="padding-right: 36px; ">Localidad: </label> <input type="text" style="border-radius: 5px;  padding: 5px;" placeholder="Ej: Lima, San Miguel, La victoria" required><br>
-                        <br>
-                    </div>
-                    <div class="file-perfil">
-                        <div class="file-select">
-                            <label ><input type="file" id="image" "></label>
-                        </div>
-                        <div class="file-result">
-                            <img id="image-result" alt="">
-                        </div>
-                    </div>
-                    
-                    <div class="box-guardar">
-                        <button class="btn-perfil" type="submit">Guardar</button>
-                    </div>
-                    
-                </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link href="../css/perfil.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importa el módulo perfil.js -->
+    <script type="module" src="../js/perfil.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <img src="../img/ProfeGO.png" />
+      </a>
+      <h2 class="title-perfil">Mi perfil</h2>
+      <a href="./busqueda.html" class="nav-perfil btn-ingresa">
+        <h4>Catálogo</h4>
+      </a>
+    </header>
+    <div class="contenido-perfil">
+      <h4>Modifica tus datos:</h4>
+      <hr />
+      <br />
+      <div>
+        <form id="formulario">
+          <div class="box-dates">
+            <label style="padding-right: 50px">Nombre: </label>
+            <input
+              id="nombreInput"
+              type="text"
+              style="border-radius: 5px; padding: 5px"
+              placeholder="Tu nombre"
+              required
+            /><br />
+            <br />
+            <label style="padding-right: 46px">Teléfono: </label>
+            <input
+              id="telefonoInput"
+              type="text"
+              style="border-radius: 5px; padding: 5px"
+              placeholder="Tu telefono"
+              required
+            /><br />
+            <br />
+            <label style="padding-right: 36px">Localidad: </label>
+            <input
+              id="localidadInput"
+              type="text"
+              style="border-radius: 5px; padding: 5px"
+              placeholder="Ej: Lima, San Miguel, La victoria"
+              required
+            /><br />
+            <br />
+          </div>
+          <div class="file-perfil">
+            <label class="file-select"
+              ><input id="fileInput" type="file" name="file" accept="image/*"
+            />Seleccionar archivo</label>
+            <div class="file-result">
+              <img id="fotoPerfil" alt="" />
             </div>
-        </div>
-    </body>
+          </div>
+
+          <div class="box-guardar">
+            <button id="enviarBtn" class="btn-perfil" type="submit">
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

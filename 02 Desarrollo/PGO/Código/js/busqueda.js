@@ -14,6 +14,9 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.14.0/fi
 var logged;
 var userUID;
 const catalogo = document.getElementById("contenedorCatalogo");
+const btnPerfil = document.getElementById("btnPerfil");
+const btnChat = document.getElementById("btnChat");
+const btnIngresar = document.getElementById("btnIngresar");
 
 window.addEventListener("load", async () => {
   await onAuthStateChanged(auth, async (user) => {
@@ -21,9 +24,12 @@ window.addEventListener("load", async () => {
       // User logged in already or has just logged in.
       userUID = user.uid;
       logged = true;
+      btnChat.style.display = "block";
+      btnPerfil.style.display = "block";
     } else {
       // User not logged in or has just logged out.
       logged = false;
+      btnIngresar.style.display = "block";
       console.log("El usuario no ha iniciado sesión");
     }
   });
