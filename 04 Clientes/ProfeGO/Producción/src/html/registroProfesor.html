@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de profesor</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link href="../css/registroProfesor.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importa el módulo registroProfesor.js -->
+    <script type="module" src="../js/registroProfesor.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href = "../index.html">
+          <img src="../img/ProfeGO.png">
+      </a>
+      <h2 class="title-register"> Registro de profesor</h2>
+      <a href="../index.html" class="nav-student btn-ingresa">
+          <h4>Soy estudiante</h4>
+      </a>
+    </header>
+    <div class="contenido">
+      <form id="formulario">
+        <p>Anunciarse como profesor particular gratis</p>
+        <h4>¿Qué estilo de clase ofreces?</h4>
+        <hr />
+        <br />
+        <div class="extras">
+          <label>
+            <input
+              type="radio"
+              name="tipo-clase"
+              value="virtual"
+              required
+            /><img src="../img/Frame 26.png" />
+          </label>
+          <label>
+            <input type="radio" name="tipo-clase" value="presencial" /><img
+              src="../img/Frame 27.png"
+            />
+          </label>
+        </div>
+        <br />
+
+        <h4>Explica brevemente de qué y cómo das clases:</h4>
+        <hr />
+        <div class="campo">
+          <label style="padding-right: 44px">Materias: </label>
+          <input
+            id="materiaInput"
+            type="text"
+            style="
+              width: 500px;
+              margin-bottom: 20px;
+              padding-right: 10px;
+              border-radius: 5px;
+            "
+            placeholder="Ej: Programación, Física, Matemática Básica"
+            required
+          /><br />
+          <label style="padding-right: 26px">Promocion: </label>
+          <input
+            id="promocionInput"
+            type="text"
+            style="
+              width: 500px;
+              margin-bottom: 20px;
+              padding-right: 10px;
+              border-radius: 5px;
+            "
+            placeholder="Ej: 20 min gratis"
+            required
+          /><br />
+          <label style="padding-right: 26px">Precio (S/.): </label>
+          <input
+            id="precioInput"
+            type="number"
+            style="
+              width: 100px;
+              margin-bottom: 20px;
+              padding-right: 10px;
+              border-radius: 5px;
+            "
+            placeholder="Ej: 10"
+            required
+          /><br />
+          <div class="campo-g">
+            <label style="padding-right: 18px">Descripción: </label>
+            <input
+              id="descripcionInput"
+              type="text"
+              style="
+                width: 500px;
+                height: 80px;
+                margin-bottom: 20px;
+                padding-right: 10px;
+                border-radius: 5px;
+              "
+              placeholder="Ej: Hola soy Albert, estudio Ing. de Software en la UNMSM."
+              required
+            /><br />
+          </div>
+        </div>
+        <h4>Para finalizar, tus datos:</h4>
+        <hr />
+        <br />
+        <div>
+          <label style="padding-right: 50px">Nombre: </label>
+          <input
+            id="nombreInput"
+            type="text"
+            style="border-radius: 5px"
+            placeholder="Tu nombre"
+            required
+          /><br />
+          <br />
+          <label style="padding-right: 46px">Teléfono: </label>
+          <input
+            id="telefonoInput"
+            type="text"
+            style="border-radius: 5px"
+            placeholder="Tu telefono"
+            required
+          /><br />
+          <br />
+          <label style="padding-right: 36px">Localidad: </label>
+          <input
+            id="localidadInput"
+            type="text"
+            style="border-radius: 5px"
+            placeholder="Ej: Lima, San Miguel, La victoria"
+            required
+          /><br />
+          <br />
+          <button id="enviarBtn" class="boton" type="submit">
+            Registrarme
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

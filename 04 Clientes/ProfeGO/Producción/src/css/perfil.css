@@ -1,0 +1,159 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+input {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.btn-perfil {
+  color: rgb(255, 255, 255);
+  background-color: #4c40f7;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-left: 240px;
+  padding: 20px 120px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.contenido-perfil {
+  margin: 0 auto;
+  width: 800px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid white;
+  border-radius: 0em;
+  background-color: white;
+  padding-bottom: 40px;
+}
+header {
+  display: flex;
+  /* justify-content: center;*/
+  padding: 10px;
+  /* align-items: center;*/
+  background-color: white;
+  border-bottom: 1px solid #bbb8b8;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* nav - registroProfesor */
+
+:root {
+  --blanco: #ffffff;
+  --primary: #4c40f7;
+  --gris-1: #444343;
+  --gris-2: #6b6b6b;
+}
+
+a {
+  text-decoration: none;
+  /* padding-top: 10px;*/
+  padding-bottom: 8px;
+}
+
+.nav-perfil h4 {
+  font-weight: 700;
+  margin: 0.5rem 1rem 0rem 0rem;
+  padding: 0.5rem;
+  color: var(--primary);
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 0.15rem;
+  border-color: var(--primary);
+}
+
+.nav-perfil h4:hover {
+  font-weight: 700;
+  margin: 0.5rem 1rem 0rem 0rem;
+  padding: 0.5rem;
+  color: var(--blanco);
+  background: var(--primary);
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 0.15rem;
+  border-color: var(--primary);
+}
+
+.title-perfil {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+form {
+  padding: 2px 20px 20px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.file-perfil {
+  padding-top: 0px;
+}
+
+.file-result {
+  margin: 0 auto;
+  margin-top: 6px;
+  width: 150px;
+  height: 150px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  border: #444343;
+  border-style: solid;
+  border-width: 0.15rem;
+  display: flex;
+  align-items: center;
+}
+
+.file-result img {
+  width: 100%;
+  height: auto;
+}
+
+.file-select {
+  /* position: relative;
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0;
+  cursor: pointer !important; */
+  /* border: 1px solid #ccc; */
+  display: flex;
+  justify-content: center;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #4c40f7;
+  color: white;
+  display: flex;
+  border-radius: 10px;
+}
+
+/* .file-select::before {
+  background-color: #4c40f7;
+  color: white;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  content: "Seleccionar archivo"; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+} */
+
+input[type="file"] {
+  display: none;
+}
+
+.box-dates {
+  padding-top: 12px;
+}
