@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link href="../css/registroProfesor.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importa el módulo registroProfesor.js -->
+    <script type="module" src="../js/perfil.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <img src="../img/ProfeGO.png" />
+      </a>
+    </header>
+    <div class="contenido">
+      <form id="formulario">
+        <h4>Foto de perfil:</h4>
+        <hr />
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+          "
+        >
+          <img
+            id="fotoPerfil"
+            src=""
+            alt=""
+            style="width: 18%; height: auto; padding: 10px 50px"
+          />
+          <div class="campo" style="width: 250px">
+            <label for="fileInput" style="padding-right: 44px"
+              >Subir una foto:
+            </label>
+            <input
+              id="fileInput"
+              type="file"
+              name="file"
+              accept="image/*"
+              style="width: 100%; padding-right: 10px; border-radius: 5px"
+            />
+          </div>
+        </div>
+        <h4>Mis datos:</h4>
+        <hr />
+        <br />
+        <div style="display: flex; justify-content: center; width: 800px">
+          <div style="width: 50%">
+            <label style="padding-right: 50px">Nombre: </label>
+            <input
+              id="nombreInput"
+              type="text"
+              style="border-radius: 5px; width: 255px"
+              placeholder="Tu nombre"
+              required
+            /><br />
+            <label style="padding-right: 46px">Teléfono: </label>
+            <input
+              id="telefonoInput"
+              type="text"
+              style="border-radius: 5px; width: 255px"
+              placeholder="Tu telefono"
+            /><br />
+            <label style="padding-right: 36px">Localidad: </label>
+            <input
+              id="localidadInput"
+              type="text"
+              style="border-radius: 5px; width: 255px"
+              placeholder="Ej: Lima, San Miguel, La victoria"
+            /><br />
+            <br />
+            <button
+              id="enviarBtn"
+              class="boton"
+              type="submit"
+              style="margin-left: 80px"
+            >
+              Guardar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
