@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfeGO</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="./css/index.css" as="style">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 40
+        }
+    </style>
+    <!-- Importa el módulo profesorPage.js -->
+    <script type="module" src="./js/header.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-right">
+            <a href="./index.html" class="logo">
+                <h3 class="logo-profe">Profe</h3>
+                <h3 class="logo-go">GO</h3>
+            </a>
+        </div>
+        <nav>
+            <a id="btnPerfil" href="./html/perfil.html" class="nav-class btn-index-perfil">
+                <h4 class="nav-text">Mi perfil</h4>
+            </a>
+            <a id="btnIngresar" href="./html/login.html" class="nav-class btn-ingresa">
+                <h4>Ingresar</h4>
+            </a>
+            <a href="./html/profesorPage.html" class="nav-class">
+                <h4>Soy profesor</h4>
+            </a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section class="sec-1">
+            <div>
+                <div class="title">
+                    <h1>Encuentra al profesor indicado para ti</h1>
+                </div>
+                <select id="options">
+                    <option>Busco Profesores</option>
+                    <option>Busco Alumnos</option>
+                    <option>Busco Cursos</option>
+                </select>
+                <div class="box-dialog">
+                    <input type="search" name="" id="box-dialog-search" placeholder="Ejemplo: Profesor en Lima">
+                </div>
+                <a class="bt-1" href="./html/busqueda.html" >Buscar</a>
+            </div>
+            <img src="./img/img.png" alt="">
+        </section>
+        <section class="sec-2">
+            <h1>Encuentra y contacta gratis con profesores particulares</h1>
+            <div class="container">
+                <div class="block">
+                    <img class="icon-1" src="./img/icon_person_search.svg"alt="">
+                    <div>
+                        <h3>Explora</h3>
+                        <p>Somos el mayor portal de profesores particulares de Perú</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <img class="icon-2" src="./img/icon_person_check.svg" alt="">
+                    <div>
+                        <h3>Escoge</h3>
+                        <p>Selecciona tu profesor perfecto según tus necesidades, su experiencia, precio.</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <img class="icon-3" src="./img/icon_school.svg" alt="">
+                    <div>
+                        <h3>Aprende</h3>
+                        <p>Con clases particulares aprendes más rápido, ya que son totalmente personalizadas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-3">
+            <div class="grid-box-1">
+                <div class="box-info" id="box-1"> 
+                    <h2>1000+</h2>
+                    <p>Usuarios activos en la comunidad</p>
+                </div>
+                <div class="box-info" id="box-2">
+                    <h2>100+</h2>
+                    <p>Variedad de cursos o temas que te pueden ayudar</p>
+                </div>
+            </div>
+            <div class="grid-box-2">
+                <div class="box-info" id="box-3">
+                    <h2>500+</h2>
+                    <p>Alumnos que buscan profesores particulares</p>
+                </div>
+                <div class="box-info" id="box-4">
+                    <h2>100+</h2>
+                    <p>Profesores</p>
+                </div>
+            </div>
+            <div class="box-text">
+                <h1>Por qué registrarte en ProfeGO</h1>
+                <h5>Son muchos los motivos por los que buscar profesor con nosotros es la opción más fiable y segura tales como:</h5>
+                <ul>
+                    <div>
+                        <img src="./img/icon_check.svg" height="30px" width="30px" alt="">
+                        <p>Variedad de precios para la comodidad de los alumnos</p>
+                    </div>
+                    <div>
+                        <img src="./img/icon_check.svg" height="30px" width="30px" alt="">
+                        <p>Soporte las 24 horas a la semana</>
+                    </div>
+                    <div>
+                        <img src="./img/icon_check.svg" height="30px" width="30px" alt="">
+                        <p>Chat privado y seguro entre alumno y profesor</p>
+                    </div>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h4>Términos y condiciones</h4>
+            <p>Política de privacidad</p>
+            <p>Condiciones uso profesores</p>
+            <p>Condiciones uso alumnos</p>
+        </div>
+        <div>
+            <h4>Descubre más</h4>
+            <p>Ayuda</p>
+            <p>Cómo funciona</p>
+            <p>Acceso profesores</p>
+            <p>Misión y visión</p>
+        </div>
+        <div>
+            <h4>Contacto</h4>
+            <p>UNMSM</p>
+            <p>carlos.mejia@unmsm.edu.pe</p>
+            <p>+51 955 649 849</p>
+        </div>
+    </footer>
+</body>
+</html>
