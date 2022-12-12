@@ -139,11 +139,11 @@ header {
 }
 
 #register-section img {
-    width: 900px;
-    height: 500px;
+    width: 85vw;
+    height: 47vw;
     position: relative;
     top: -300px;
-    left: 300px;
+    left: 100px;
     z-index: 1;
 }
 
@@ -241,4 +241,90 @@ footer {
     justify-content: center;
     padding: 10px;
     gap: 10px;
+}
+
+
+/* nav- profesor page */
+
+.buscar{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.buscar input{
+    width: 240px;
+    height: 30px;
+    font-size: 14px;
+    color: #000;
+    outline:none;
+    padding-left: 20px;
+    border: 1px solid silver;
+    border-radius: 30px;
+}
+
+
+.navbar-right{
+    margin-right: -50px;
+}
+
+header{
+    border-bottom: 1px solid #6B6B6B;
+}
+
+header, .navbar-right{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-inline: 50px;
+}
+
+:root {
+    --blanco: #FFFFFF;
+    --primary: #4C40F7;
+    --gris-1: #444343;
+    --gris-2: #6B6B6B;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.nav-search h4{
+    font-weight: 600;
+    margin: 0.5rem 1rem 0.5rem 0rem;
+    padding: 0.7rem;
+    color: var(--primary);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 0.15rem;
+    border-color: var(--primary);
+}
+
+.nav-search h4:hover{
+    font-weight: 600;
+    margin: 0.5rem 1rem 0.5rem 0rem;
+    padding: 0.7rem;
+    color: var(--blanco);
+    background: var(--primary);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 0.15rem;
+    border-color: var(--primary);
+}
+
+.mensaje-logo {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.btn-profesor-perfil {
+    display: none;
+}
+
+.btn-ingreso {
+    display: none;
 }

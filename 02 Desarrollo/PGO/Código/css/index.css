@@ -71,15 +71,11 @@ main {
     color: var(--gris-2);
 }
 
-.nav-account {
-    display: flex;
-    align-items: center;
-}
 
 .nav-class h4{
-    font-weight: 500;
-    margin: 0.5rem 3rem 0.5rem 3rem;
-    padding: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    padding: 1.2rem;
     color: var(--primary);
     border-style: solid;
     border-radius: 15px;
@@ -88,9 +84,9 @@ main {
 }
 
 .nav-class h4:hover{
-    font-weight: 500;
-    margin: 0.5rem 3rem 0.5rem 3rem;
-    padding: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    padding: 1.2rem;
     color: var(--blanco);
     background: var(--primary);
     border-style: solid;
@@ -130,4 +126,21 @@ nav {
 
 @media (min-width: 480px) {
   
+}
+
+
+.btn-ingresa {
+    display: none;
+}
+
+.btn-index-perfil {
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+
+
+.box-guardar {
+    margin-top: 50px;
 }
